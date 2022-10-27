@@ -10,7 +10,7 @@ class RegimeKhoScreen extends StatelessWidget {
         centerTitle: true, //chữ căn giữa
         title: const Text(
           'Khó',
-          style: TextStyle(color: Color.fromARGB(255, 243, 229, 105)),
+          style: TextStyle(color: Color.fromRGBO(205, 190, 145, 1)),
         ),
         backgroundColor: Color.fromRGBO(30, 35, 40, 1),
       ),
@@ -25,14 +25,14 @@ class RegimeKhoScreen extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              margin: const EdgeInsets.all(130),
+              margin: const EdgeInsets.all(120),
               //  alignment: Alignment.bottomCenter,
               child: Column(
                 // mainAxisAlignment: MainAxisAlignment.center,
                 // crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Container(
-                    padding: EdgeInsets.all(15),
+                    padding: EdgeInsets.all(50),
                     child: SizedBox(
                       height: 80,
                       width: 120,
@@ -57,29 +57,7 @@ class RegimeKhoScreen extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    padding: EdgeInsets.all(15),
-                    child: SizedBox(
-                      height: 80,
-                      width: 120,
-                      child: TextButton(
-                        child: Text(
-                          'Tạo phòng',
-                          style: TextStyle(
-                            color: Color.fromRGBO(205, 190, 145, 1),
-                            fontSize: 20,
-                          ),
-                        ),
-                        style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all(
-                                Color.fromRGBO(30, 35, 40, 1))),
-                        onPressed: () {
-                          // action on pressed
-                        },
-                      ),
-                    ),
-                  ),
-                  Container(
-                    padding: EdgeInsets.all(15),
+                    padding: EdgeInsets.all(30),
                     child: SizedBox(
                       height: 80,
                       width: 120,

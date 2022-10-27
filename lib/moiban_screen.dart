@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_doan_demo1/choicungban_screen.dart';
 import 'package:flutter_doan_demo1/field_screen.dart';
 import 'package:flutter_doan_demo1/trangchu_screen.dart';
+import 'package:flutter_doan_demo1/xacnhaloimoi_screen.dart';
 
 class MoiBanScreen extends StatelessWidget {
   @override
@@ -44,10 +46,83 @@ class MoiBanScreen extends StatelessWidget {
                 ],
               ),
             ),
-
+            Container(
+              padding: EdgeInsets.only(top: 10),
+              height: 50,
+              width: 500,
+              /* decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            color: Colors.white,
+                          ),*/
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => XacNhapLoiMoiScreen()));
+                },
+                //đổi màu cái nút
+                style: ElevatedButton.styleFrom(
+                    fixedSize: const Size(200, 50),
+                    backgroundColor: Colors.white),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Icon(
+                      Icons.person,
+                      color: Colors.black,
+                    ),
+                    Text(
+                      'Lợi nè',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 15,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.only(top: 10),
+              height: 50,
+              width: 500,
+              /* decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            color: Colors.white,
+                          ),*/
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => XacNhapLoiMoiScreen()));
+                },
+                //đổi màu cái nút
+                style: ElevatedButton.styleFrom(
+                    fixedSize: const Size(200, 50),
+                    backgroundColor: Colors.white),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Icon(
+                      Icons.person,
+                      color: Colors.black,
+                    ),
+                    Text(
+                      'Bảo nè',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 15,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
             //Container chứa hồ sơ, trang chủ ,đấu
             Container(
-              margin: const EdgeInsets.only(top: 500),
+              margin: const EdgeInsets.only(top: 450),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 //  crossAxisAlignment: CrossAxisAlignment.end,
