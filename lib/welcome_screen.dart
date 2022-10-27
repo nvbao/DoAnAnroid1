@@ -54,7 +54,7 @@ class WelcomeScreen extends StatelessWidget {
                 //đổi màu cái nút
                 style: ElevatedButton.styleFrom(
                     fixedSize: const Size(200, 50),
-                    backgroundColor: Color.fromARGB(224, 226, 85, 8)),
+                    backgroundColor: Color.fromARGB(255, 255, 98, 0)),
                 child: const Text('Ready Go!'),
               ),
             ),

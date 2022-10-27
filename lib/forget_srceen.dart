@@ -29,16 +29,20 @@ class ForgetScreen extends StatelessWidget {
             Container(
               padding: EdgeInsets.all(15),
               child: const TextField(
+                style:
+                    TextStyle(color: Colors.white, fontWeight: FontWeight.w300),
                 decoration: InputDecoration(
                   labelText: 'Email',
                   labelStyle: TextStyle(
                       fontWeight: FontWeight.normal, color: Colors.white),
+
+                  //đổi màu viền
                   enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(5)),
                     borderSide: BorderSide(
                       color: Colors.white,
                       width: 2,
                     ),
-                    // borderRadius: BorderRadius.circular(3),
                   ),
                 ),
               ),
@@ -46,6 +50,8 @@ class ForgetScreen extends StatelessWidget {
             Container(
               padding: EdgeInsets.all(15),
               child: const TextField(
+                style:
+                    TextStyle(color: Colors.white, fontWeight: FontWeight.w300),
                 decoration: InputDecoration(
                   labelText: 'Họ và tên',
                   fillColor: Colors.white,
@@ -63,6 +69,8 @@ class ForgetScreen extends StatelessWidget {
             Container(
               padding: EdgeInsets.all(15),
               child: const TextField(
+                style:
+                    TextStyle(color: Colors.white, fontWeight: FontWeight.w300),
                 decoration: InputDecoration(
                   labelText: 'Tên đăng nhập',
                   labelStyle: TextStyle(
@@ -79,6 +87,8 @@ class ForgetScreen extends StatelessWidget {
             Container(
               padding: EdgeInsets.all(15),
               child: const TextField(
+                style:
+                    TextStyle(color: Colors.white, fontWeight: FontWeight.w300),
                 decoration: InputDecoration(
                   labelText: 'Mật khẩu',
                   labelStyle: TextStyle(
@@ -95,6 +105,8 @@ class ForgetScreen extends StatelessWidget {
             Container(
               padding: EdgeInsets.all(15),
               child: const TextField(
+                style:
+                    TextStyle(color: Colors.white, fontWeight: FontWeight.w300),
                 decoration: InputDecoration(
                   labelText: 'Xác nhận mật khẩu',
                   labelStyle: TextStyle(
@@ -132,7 +144,7 @@ class ForgetScreen extends StatelessWidget {
                 //đổi màu cái nút
                 style: ElevatedButton.styleFrom(
                     fixedSize: const Size(200, 50),
-                    backgroundColor: Color.fromARGB(224, 226, 85, 8)),
+                    backgroundColor: Color.fromARGB(255, 255, 98, 0)),
                 child: const Text('Đăng Ký'),
               ),
             ),

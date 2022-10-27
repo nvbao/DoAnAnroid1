@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_doan_demo1/field_screen.dart';
-import 'package:flutter_doan_demo1/questionnext_screen.dart';
 import 'package:flutter_doan_demo1/result_screen.dart';
-import 'package:flutter_doan_demo1/trangchu_screen.dart';
 
-class QuestionScreen extends StatelessWidget {
+class QuestionNextScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,7 +56,7 @@ class QuestionScreen extends StatelessWidget {
                             builder: (context) {
                               return SimpleDialog(
                                 backgroundColor:
-                                    Color.fromARGB(223, 243, 167, 126),
+                                    Color.fromARGB(255, 235, 140, 100),
                                 children: <Widget>[
                                   Container(
                                     padding: EdgeInsets.all(15),
@@ -71,7 +68,7 @@ class QuestionScreen extends StatelessWidget {
                                       style: ElevatedButton.styleFrom(
                                           fixedSize: const Size(120, 50),
                                           backgroundColor:
-                                              Color.fromARGB(255, 255, 98, 0)),
+                                              Color.fromARGB(224, 226, 85, 8)),
                                       child: const Text(
                                         'Mua Đáp Án',
                                         textAlign: TextAlign.center,
@@ -176,7 +173,7 @@ class QuestionScreen extends StatelessWidget {
                     children: <Widget>[
                       ListTile(
                         title: Text(
-                          'Câu 1:',
+                          'Câu 2:',
                           style: TextStyle(fontSize: 20, color: Colors.white),
                         ),
                       ),
@@ -279,10 +276,7 @@ class QuestionScreen extends StatelessWidget {
               padding: EdgeInsets.all(15),
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => QuestionNextScreen()));
+                  // bổ sung tiếp
                 },
                 //đổi màu cái nút
                 style: ElevatedButton.styleFrom(

@@ -37,6 +37,7 @@ class LoginScreen extends StatelessWidget {
                   labelStyle: TextStyle(
                       fontWeight: FontWeight.normal, color: Colors.white),
                   enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(5)),
                     borderSide: BorderSide(
                       color: Colors.white,
                       width: 2,
@@ -57,7 +58,7 @@ class LoginScreen extends StatelessWidget {
 
                   //đổi màu viền
                   enabledBorder: OutlineInputBorder(
-                    // borderRadius: BorderRadius.circular(3),
+                    borderRadius: BorderRadius.all(Radius.circular(5)),
                     borderSide: BorderSide(
                       color: Colors.white,
                       width: 2,
@@ -91,7 +92,7 @@ class LoginScreen extends StatelessWidget {
                 //đổi màu cái nút
                 style: ElevatedButton.styleFrom(
                     fixedSize: const Size(200, 50),
-                    backgroundColor: Color.fromARGB(224, 226, 85, 8)),
+                    backgroundColor: Color.fromARGB(255, 255, 98, 0)),
                 child: const Text('Đăng Nhập'),
               ),
             ),
@@ -105,7 +106,7 @@ class LoginScreen extends StatelessWidget {
                 //đổi màu cái nút
                 style: ElevatedButton.styleFrom(
                     fixedSize: const Size(200, 50),
-                    backgroundColor: Color.fromARGB(224, 226, 85, 8)),
+                    backgroundColor: Color.fromARGB(255, 255, 98, 0)),
                 child: const Text('Đăng Ký'),
               ),
             ),
