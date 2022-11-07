@@ -25,23 +25,23 @@ class ModeTiengAnhScreen extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              margin: const EdgeInsets.all(120),
+              margin: const EdgeInsets.only(top: 160),
               //  alignment: Alignment.bottomCenter,
               child: Column(
                 // mainAxisAlignment: MainAxisAlignment.center,
                 // crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Container(
-                    padding: EdgeInsets.all(50),
+                    padding: EdgeInsets.all(5),
                     child: SizedBox(
-                      height: 80,
-                      width: 120,
+                      height: 100,
+                      width: 150,
                       child: TextButton(
                         child: Text(
                           'Đấu thường',
                           style: TextStyle(
                             color: Color.fromRGBO(205, 190, 145, 1),
-                            fontSize: 20,
+                            fontSize: 25,
                           ),
                         ),
                         style: ButtonStyle(
@@ -58,16 +58,16 @@ class ModeTiengAnhScreen extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    padding: EdgeInsets.all(30),
+                    padding: EdgeInsets.all(25),
                     child: SizedBox(
-                      height: 80,
-                      width: 120,
+                      height: 100,
+                      width: 150,
                       child: TextButton(
                         child: Text(
                           'Xếp hạng',
                           style: TextStyle(
                             color: Color.fromRGBO(205, 190, 145, 1),
-                            fontSize: 20,
+                            fontSize: 25,
                           ),
                         ),
                         style: ButtonStyle(
@@ -87,6 +87,7 @@ class ModeTiengAnhScreen extends StatelessWidget {
             ),
             //Container chứa hồ sơ, trang chủ ,đấu
             Container(
+              padding: EdgeInsets.only(top: 170),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 //  crossAxisAlignment: CrossAxisAlignment.end,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_doan_demo1/dongho.dart';
 import 'package:flutter_doan_demo1/field_screen.dart';
 import 'package:flutter_doan_demo1/questionnext_screen.dart';
 import 'package:flutter_doan_demo1/result_screen.dart';
@@ -33,16 +34,7 @@ class QuestionScreen extends StatelessWidget {
               ),
               margin: EdgeInsets.all(20.0),
               child: Container(
-                child: Column(
-                  children: <Widget>[
-                    ListTile(
-                      title: Text(
-                        '10s',
-                        style: TextStyle(fontSize: 20, color: Colors.white),
-                      ),
-                    ),
-                  ],
-                ),
+                child: Row(children: [OtpTimer()]),
               ),
             ),
 
@@ -176,8 +168,8 @@ class QuestionScreen extends StatelessWidget {
                     children: <Widget>[
                       ListTile(
                         title: Text(
-                          'Câu 1:',
-                          style: TextStyle(fontSize: 20, color: Colors.white),
+                          'Câu 1: Thầy dạy lập trình di động của chúng ta tên là gì?',
+                          style: TextStyle(fontSize: 25, color: Colors.white),
                         ),
                       ),
                     ],
@@ -189,6 +181,7 @@ class QuestionScreen extends StatelessWidget {
             //đáp án
             Container(
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
@@ -202,7 +195,27 @@ class QuestionScreen extends StatelessWidget {
                           fixedSize: const Size(450, 50),
                           backgroundColor: Color.fromRGBO(30, 35, 40, 1)),
                       child: const Text(
-                        'A:',
+                        'A: Nguyên',
+                        textAlign: TextAlign.start,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    child: ElevatedButton(
+                      onPressed: () {
+                        //chuyen qua quyền trợ giúp
+                      }, // bổ sung đâng nhập
+                      //đổi màu cái nút
+                      style: ElevatedButton.styleFrom(
+                          fixedSize: const Size(450, 50),
+                          backgroundColor: Color.fromRGBO(30, 35, 40, 1)),
+                      child: const Text(
+                        'B: Lê',
                         // textAlign: TextAlign.start,
                         style: TextStyle(
                           color: Colors.white,
@@ -222,7 +235,7 @@ class QuestionScreen extends StatelessWidget {
                           fixedSize: const Size(450, 50),
                           backgroundColor: Color.fromRGBO(30, 35, 40, 1)),
                       child: const Text(
-                        'B:',
+                        'C: Viết',
                         // textAlign: TextAlign.start,
                         style: TextStyle(
                           color: Colors.white,
@@ -242,27 +255,7 @@ class QuestionScreen extends StatelessWidget {
                           fixedSize: const Size(450, 50),
                           backgroundColor: Color.fromRGBO(30, 35, 40, 1)),
                       child: const Text(
-                        'C:',
-                        // textAlign: TextAlign.start,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                        ),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    padding: EdgeInsets.all(10),
-                    child: ElevatedButton(
-                      onPressed: () {
-                        //chuyen qua quyền trợ giúp
-                      }, // bổ sung đâng nhập
-                      //đổi màu cái nút
-                      style: ElevatedButton.styleFrom(
-                          fixedSize: const Size(450, 50),
-                          backgroundColor: Color.fromRGBO(30, 35, 40, 1)),
-                      child: const Text(
-                        'D:',
+                        'D:Hoàng',
                         //  textAlign: TextAlign.start,
                         style: TextStyle(
                           color: Colors.white,

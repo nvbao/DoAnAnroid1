@@ -1,5 +1,4 @@
-import 'dart:html';
-
+//import 'dart:html';
 import 'package:flutter/material.dart';
 import 'package:flutter_doan_demo1/caidatchung_screen.dart';
 import 'package:flutter_doan_demo1/choicungban_screen.dart';
@@ -14,7 +13,6 @@ import 'package:flutter_doan_demo1/profile_screen.dart';
 import 'package:flutter_doan_demo1/question_screen.dart';
 import 'package:flutter_doan_demo1/regimede_screen.dart';
 import 'package:flutter_doan_demo1/result_screen.dart';
-import 'package:flutter_doan_demo1/taophong_screen.dart';
 import 'package:flutter_doan_demo1/trangchu_screen.dart';
 import 'package:flutter_doan_demo1/welcome_screen.dart';
 import 'package:flutter_doan_demo1/xacnhaloimoi_screen.dart';
@@ -29,8 +27,8 @@ class DoAnApp extends StatelessWidget {
       home: // ChoiCungBanScreen(),
           // XacNhapLoiMoiScreen(),
           // TaoPhongScreen(),
-          // CaiDatScreen(),
-          // ProfileScreen(),
+          //CaiDatScreen(),
+          //ProfileScreen(),
           //FriendScreen(),
           // ResultScreen(),
           // QuestionScreen(),
@@ -39,9 +37,9 @@ class DoAnApp extends StatelessWidget {
           // LevelDauThuongScreen(),
           // TrangChuScreen(),
           //ModeToanScreen(),
-          //  FieldScreen(),
+          // FieldScreen(),
           //ForgetScreen(),
-          // LoginScreen(),
+          // LoginScreen(), 
           WelcomeScreen(),
     );
   }

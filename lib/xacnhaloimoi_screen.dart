@@ -46,6 +46,8 @@ class XacNhapLoiMoiScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Container(
+                          height: 80,
+                          width: 150,
                           padding: EdgeInsets.all(15),
                           child: ElevatedButton(
                             onPressed: () {
@@ -70,6 +72,8 @@ class XacNhapLoiMoiScreen extends StatelessWidget {
                           ),
                         ),
                         Container(
+                          height: 80,
+                          width: 150,
                           padding: EdgeInsets.all(15),
                           child: ElevatedButton(
                             onPressed: () {

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_doan_demo1/dongho.dart';
 import 'package:flutter_doan_demo1/result_screen.dart';
 
 class QuestionNextScreen extends StatelessWidget {
@@ -30,16 +31,7 @@ class QuestionNextScreen extends StatelessWidget {
               ),
               margin: EdgeInsets.all(20.0),
               child: Container(
-                child: Column(
-                  children: <Widget>[
-                    ListTile(
-                      title: Text(
-                        '10s',
-                        style: TextStyle(fontSize: 20, color: Colors.white),
-                      ),
-                    ),
-                  ],
-                ),
+                child: Row(children: [OtpTimer()]),
               ),
             ),
 
@@ -173,8 +165,8 @@ class QuestionNextScreen extends StatelessWidget {
                     children: <Widget>[
                       ListTile(
                         title: Text(
-                          'Câu 2:',
-                          style: TextStyle(fontSize: 20, color: Colors.white),
+                          'Câu 2: Quê của thầy là ở đâu?',
+                          style: TextStyle(fontSize: 25, color: Colors.white),
                         ),
                       ),
                     ],
@@ -199,7 +191,7 @@ class QuestionNextScreen extends StatelessWidget {
                           fixedSize: const Size(450, 50),
                           backgroundColor: Color.fromRGBO(30, 35, 40, 1)),
                       child: const Text(
-                        'A:',
+                        'A: Quảng Trị',
                         // textAlign: TextAlign.start,
                         style: TextStyle(
                           color: Colors.white,
@@ -219,7 +211,7 @@ class QuestionNextScreen extends StatelessWidget {
                           fixedSize: const Size(450, 50),
                           backgroundColor: Color.fromRGBO(30, 35, 40, 1)),
                       child: const Text(
-                        'B:',
+                        'B: Quảng Bình',
                         // textAlign: TextAlign.start,
                         style: TextStyle(
                           color: Colors.white,
@@ -239,7 +231,7 @@ class QuestionNextScreen extends StatelessWidget {
                           fixedSize: const Size(450, 50),
                           backgroundColor: Color.fromRGBO(30, 35, 40, 1)),
                       child: const Text(
-                        'C:',
+                        'C:Quảng Ngãi',
                         // textAlign: TextAlign.start,
                         style: TextStyle(
                           color: Colors.white,
@@ -259,7 +251,7 @@ class QuestionNextScreen extends StatelessWidget {
                           fixedSize: const Size(450, 50),
                           backgroundColor: Color.fromRGBO(30, 35, 40, 1)),
                       child: const Text(
-                        'D:',
+                        'D:Quảng Ninh',
                         //  textAlign: TextAlign.start,
                         style: TextStyle(
                           color: Colors.white,

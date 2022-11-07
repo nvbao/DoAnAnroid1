@@ -38,7 +38,7 @@ class CaiDatScreenState extends State<CaiDatScreen> {
             BottomNavigationBarItem(icon: Icon(Icons.room), label: 'Đấu'),
           ]),
       body: Container(
-        padding: EdgeInsets.all(100),
+        // padding: EdgeInsets.only(top: 10),
         decoration: BoxDecoration(
           image: DecorationImage(
               image: AssetImage('images/trithuc.jpg'), fit: BoxFit.fill),
@@ -47,9 +47,9 @@ class CaiDatScreenState extends State<CaiDatScreen> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Container(
-              padding: const EdgeInsets.all(20),
+              // padding: const EdgeInsets.all(50),
               height: 400,
-              width: 500,
+              width: 800,
               decoration: BoxDecoration(
                 color: Color.fromARGB(255, 235, 140, 100),
                 borderRadius: BorderRadius.circular(15),
@@ -58,17 +58,22 @@ class CaiDatScreenState extends State<CaiDatScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Container(
+                    padding: EdgeInsets.only(top: 10),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Container(
-                          margin: EdgeInsets.only(bottom: 20),
+                          height: 80,
+                          width: 250,
+                          margin: EdgeInsets.only(bottom: 10),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             color: Colors.white,
                           ),
                           child: SwitchListTile(
-                              title: Text('Âm thanh'),
+                              title: Text(
+                                'Âm thanh',
+                              ),
                               secondary: Icon(Icons.volume_down),
                               value: _toggled1,
                               onChanged: (value) {
@@ -76,7 +81,9 @@ class CaiDatScreenState extends State<CaiDatScreen> {
                               }),
                         ),
                         Container(
-                          margin: EdgeInsets.only(bottom: 20),
+                          height: 80,
+                          width: 250,
+                          margin: EdgeInsets.only(bottom: 10),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             color: Colors.white,
@@ -90,7 +97,9 @@ class CaiDatScreenState extends State<CaiDatScreen> {
                               }),
                         ),
                         Container(
-                          margin: EdgeInsets.only(bottom: 20),
+                          height: 80,
+                          width: 250,
+                          margin: EdgeInsets.only(bottom: 10),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             color: Colors.white,
@@ -101,7 +110,9 @@ class CaiDatScreenState extends State<CaiDatScreen> {
                           ),
                         ),
                         Container(
-                          margin: EdgeInsets.only(bottom: 20),
+                          height: 80,
+                          width: 250,
+                          margin: EdgeInsets.only(bottom: 10),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             color: Colors.white,

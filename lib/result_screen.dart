@@ -34,10 +34,10 @@ class ResultScreen extends StatelessWidget {
               child: Column(
                 children: [
                   Container(
-                    padding: EdgeInsets.all(35),
+                    padding: EdgeInsets.all(15),
                     child: Text(
                       'Chúc mừng bạn đã hoàn thành',
-                      style: TextStyle(color: Colors.black, fontSize: 28),
+                      style: TextStyle(color: Colors.black, fontSize: 22),
                     ),
                   ),
                   Card(
@@ -108,7 +108,9 @@ class ResultScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Container(
-                          padding: EdgeInsets.all(15),
+                          height: 80,
+                          width: 150,
+                          padding: EdgeInsets.all(5),
                           child: ElevatedButton(
                             onPressed: () {
                               Navigator.push(
@@ -131,7 +133,9 @@ class ResultScreen extends StatelessWidget {
                           ),
                         ),
                         Container(
-                          padding: EdgeInsets.all(15),
+                          height: 80,
+                          width: 150,
+                          padding: EdgeInsets.all(5),
                           child: ElevatedButton(
                             onPressed: () {
                               Navigator.push(

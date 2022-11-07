@@ -4,48 +4,51 @@ import 'package:flutter_doan_demo1/login_srceen.dart';
 class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Widget txtSection = Container(
-      padding: const EdgeInsets.all(100),
-      child: Center(
+    return Scaffold(
+      body: Container(
+        padding: EdgeInsets.all(80),
+        decoration: BoxDecoration(
+          //hình làm backgroud
+          image: DecorationImage(
+            image: AssetImage("images/trithuc.jpg"),
+            fit: BoxFit.fill,
+          ),
+        ),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          // crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              padding: const EdgeInsets.all(30),
+              padding: const EdgeInsets.only(top: 100),
               child: const Text(
                 'Welcome',
-                textAlign: TextAlign.start,
                 style: TextStyle(
-                    fontSize: 40,
+                    fontSize: 30,
                     fontWeight: FontWeight.normal,
                     color: Colors.white),
               ),
             ),
             Container(
-              padding: const EdgeInsets.all(30),
+              padding: const EdgeInsets.all(25),
               child: const Text(
                 'Trắc nghiệm',
-                textAlign: TextAlign.start,
                 style: TextStyle(
-                    fontSize: 40,
+                    fontSize: 25,
                     fontWeight: FontWeight.normal,
                     color: Colors.white),
               ),
             ),
             Container(
-              padding: const EdgeInsets.all(30),
+              padding: const EdgeInsets.all(5),
               child: const Text(
                 'Online',
-                textAlign: TextAlign.start,
                 style: TextStyle(
-                    fontSize: 40,
+                    fontSize: 30,
                     fontWeight: FontWeight.normal,
                     color: Colors.white),
               ),
             ),
             Container(
-              padding: EdgeInsets.all(15),
+              padding: EdgeInsets.all(25),
               child: ElevatedButton(
                 onPressed: () {
                   Navigator.push(context,
@@ -59,26 +62,6 @@ class WelcomeScreen extends StatelessWidget {
               ),
             ),
           ],
-        ),
-      ),
-    );
-    return MaterialApp(
-      title: 'Câu Hỏi Trắc Nghiệm',
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: Container(
-          decoration: BoxDecoration(
-            //hình làm backgroud
-            image: DecorationImage(
-              image: AssetImage("images/trithuc.jpg"),
-              fit: BoxFit.fill,
-            ),
-          ),
-          child: Column(
-            children: [
-              txtSection,
-            ],
-          ),
         ),
       ),
     );

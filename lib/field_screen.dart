@@ -32,7 +32,7 @@ class FieldScreen extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              margin: const EdgeInsets.only(top: 140, left: 120, right: 20),
+              margin: const EdgeInsets.only(top: 140, left: 70, right: 40),
               //  alignment: Alignment.bottomCenter,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -283,7 +283,7 @@ class FieldScreen extends StatelessWidget {
             ),
             //Container chứa hồ sơ, trang chủ ,đấu
             Container(
-              padding: EdgeInsets.all(50),
+              padding: EdgeInsets.only(top: 40, right: 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 //  crossAxisAlignment: CrossAxisAlignment.end,
@@ -291,8 +291,8 @@ class FieldScreen extends StatelessWidget {
                   Container(
                     padding: EdgeInsets.all(5),
                     child: SizedBox(
-                      height: 70,
-                      width: 120,
+                      height: 60,
+                      width: 110,
                       child: TextButton(
                         child: Text(
                           'Hồ sơ',
@@ -313,8 +313,8 @@ class FieldScreen extends StatelessWidget {
                   Container(
                     padding: EdgeInsets.all(5),
                     child: SizedBox(
-                      height: 70,
-                      width: 120,
+                      height: 60,
+                      width: 110,
                       child: TextButton(
                         child: Text(
                           'Trang chủ',
@@ -338,8 +338,8 @@ class FieldScreen extends StatelessWidget {
                   Container(
                     padding: EdgeInsets.all(5),
                     child: SizedBox(
-                      height: 70,
-                      width: 120,
+                      height: 60,
+                      width: 110,
                       child: TextButton(
                         child: Text(
                           'Đấu',

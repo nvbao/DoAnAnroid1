@@ -25,14 +25,14 @@ class RegimeKhoScreen extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              margin: const EdgeInsets.all(120),
+              padding: EdgeInsets.only(top: 150),
               //  alignment: Alignment.bottomCenter,
               child: Column(
                 // mainAxisAlignment: MainAxisAlignment.center,
                 // crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Container(
-                    padding: EdgeInsets.all(50),
+                    padding: EdgeInsets.all(20),
                     child: SizedBox(
                       height: 80,
                       width: 120,
@@ -57,7 +57,7 @@ class RegimeKhoScreen extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    padding: EdgeInsets.all(30),
+                    padding: EdgeInsets.all(20),
                     child: SizedBox(
                       height: 80,
                       width: 120,
@@ -86,6 +86,7 @@ class RegimeKhoScreen extends StatelessWidget {
             ),
             //Container chứa hồ sơ, trang chủ ,đấu
             Container(
+              padding: EdgeInsets.only(top: 150),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 //  crossAxisAlignment: CrossAxisAlignment.end,

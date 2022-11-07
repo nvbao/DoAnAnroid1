@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_doan_demo1/caidatchung_screen.dart';
+import 'package:flutter_doan_demo1/friend_screen.dart';
 
 class ProfileScreen extends StatelessWidget {
   @override
@@ -44,10 +45,12 @@ class ProfileScreen extends StatelessWidget {
               ),
               child: ListTile(
                 leading: CircleAvatar(
+                  radius: 50,
                   child: Icon(Icons.person_outline_outlined),
                 ),
                 title: Text('L'),
                 subtitle: Text('id của bạn là: 123456'),
+                
               ),
             ),
             Container(
@@ -120,17 +123,37 @@ class ProfileScreen extends StatelessWidget {
                         Container(
                           height: 100,
                           width: 80,
-                          padding: EdgeInsets.only(right: 10),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
+                          /* decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
                             color: Colors.white,
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(Icons.person),
-                              Text("Bạn bè"),
-                            ],
+                          ),*/
+                          child: ElevatedButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => FriendScreen()));
+                            },
+                            //đổi màu cái nút
+                            style: ElevatedButton.styleFrom(
+                                fixedSize: const Size(200, 50),
+                                backgroundColor: Colors.white),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.person,
+                                  color: Colors.black,
+                                ),
+                                Text(
+                                  'Bạn bè',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 15,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                         Container(

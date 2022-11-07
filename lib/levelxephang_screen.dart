@@ -33,7 +33,7 @@ class LevelXepHangScreen extends StatelessWidget {
                 // crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Container(
-                    padding: EdgeInsets.all(15),
+                    padding: EdgeInsets.all(10),
                     child: SizedBox(
                       height: 80,
                       width: 120,
@@ -58,7 +58,7 @@ class LevelXepHangScreen extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    padding: EdgeInsets.all(15),
+                    padding: EdgeInsets.all(5),
                     child: SizedBox(
                       height: 80,
                       width: 120,
@@ -84,7 +84,7 @@ class LevelXepHangScreen extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    padding: EdgeInsets.all(15),
+                    padding: EdgeInsets.all(10),
                     child: SizedBox(
                       height: 80,
                       width: 120,

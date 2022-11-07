@@ -64,7 +64,9 @@ class FriendScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Container(
-                          padding: EdgeInsets.all(15),
+                          height: 80,
+                          width: 150,
+                          padding: EdgeInsets.all(10),
                           child: ElevatedButton(
                             onPressed: () {},
                             //đổi màu cái nút
@@ -81,15 +83,19 @@ class FriendScreen extends StatelessWidget {
                           ),
                         ),
                         Container(
-                          padding: EdgeInsets.all(15),
+                          height: 80,
+                          width: 150,
+                          padding: EdgeInsets.all(10),
                           child: ElevatedButton(
                             onPressed: () {},
                             //đổi màu cái nút
+
                             style: ElevatedButton.styleFrom(
                                 fixedSize: const Size(200, 50),
                                 backgroundColor: Colors.white),
+
                             child: const Text(
-                              'Theo dõi',
+                              'Thêm bạn',
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 20,
@@ -107,7 +113,7 @@ class FriendScreen extends StatelessWidget {
               ),
             ),
             Container(
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.only(right: 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 //  crossAxisAlignment: CrossAxisAlignment.end,
@@ -116,7 +122,7 @@ class FriendScreen extends StatelessWidget {
                     padding: EdgeInsets.all(5),
                     child: SizedBox(
                       height: 70,
-                      width: 120,
+                      width: 110,
                       child: TextButton(
                         child: Text(
                           'Hồ sơ',
@@ -138,7 +144,7 @@ class FriendScreen extends StatelessWidget {
                     padding: EdgeInsets.all(5),
                     child: SizedBox(
                       height: 70,
-                      width: 120,
+                      width: 110,
                       child: TextButton(
                         child: Text(
                           'Trang chủ',
@@ -151,10 +157,7 @@ class FriendScreen extends StatelessWidget {
                             backgroundColor: MaterialStateProperty.all(
                                 Color.fromRGBO(30, 35, 40, 1))),
                         onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => TrangChuScreen()));
+                          // action on pressed
                         },
                       ),
                     ),
@@ -163,7 +166,7 @@ class FriendScreen extends StatelessWidget {
                     padding: EdgeInsets.all(5),
                     child: SizedBox(
                       height: 70,
-                      width: 120,
+                      width: 110,
                       child: TextButton(
                         child: Text(
                           'Đấu',
@@ -176,10 +179,7 @@ class FriendScreen extends StatelessWidget {
                             backgroundColor: MaterialStateProperty.all(
                                 Color.fromRGBO(30, 35, 40, 1))),
                         onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => FieldScreen()));
+                          // action on pressed
                         },
                       ),
                     ),
