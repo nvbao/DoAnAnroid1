@@ -26,6 +26,7 @@ class LevelDauThuongScreen extends StatelessWidget {
         child: Column(
           children: [
             Container(
+              padding: EdgeInsets.only(top: 50),
               margin: const EdgeInsets.all(130),
               //  alignment: Alignment.bottomCenter,
               child: Column(
@@ -33,7 +34,7 @@ class LevelDauThuongScreen extends StatelessWidget {
                 // crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Container(
-                    padding: EdgeInsets.all(10),
+                    padding: EdgeInsets.all(15),
                     child: SizedBox(
                       height: 80,
                       width: 120,
@@ -84,7 +85,7 @@ class LevelDauThuongScreen extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    padding: EdgeInsets.all(10),
+                    padding: EdgeInsets.all(15),
                     child: SizedBox(
                       height: 80,
                       width: 120,
@@ -104,81 +105,6 @@ class LevelDauThuongScreen extends StatelessWidget {
                               context,
                               MaterialPageRoute(
                                   builder: (context) => RegimeKhoScreen()));
-                        },
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            //Container chứa hồ sơ, trang chủ ,đấu
-            Container(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                //  crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  Container(
-                    padding: EdgeInsets.all(5),
-                    child: SizedBox(
-                      height: 70,
-                      width: 120,
-                      child: TextButton(
-                        child: Text(
-                          'Hồ sơ',
-                          style: TextStyle(
-                            color: Color.fromRGBO(205, 190, 145, 1),
-                            fontSize: 20,
-                          ),
-                        ),
-                        style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all(
-                                Color.fromRGBO(30, 35, 40, 1))),
-                        onPressed: () {
-                          // action on pressed
-                        },
-                      ),
-                    ),
-                  ),
-                  Container(
-                    padding: EdgeInsets.all(5),
-                    child: SizedBox(
-                      height: 70,
-                      width: 120,
-                      child: TextButton(
-                        child: Text(
-                          'Trang chủ',
-                          style: TextStyle(
-                            color: Color.fromRGBO(205, 190, 145, 1),
-                            fontSize: 20,
-                          ),
-                        ),
-                        style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all(
-                                Color.fromRGBO(30, 35, 40, 1))),
-                        onPressed: () {
-                          // action on pressed
-                        },
-                      ),
-                    ),
-                  ),
-                  Container(
-                    padding: EdgeInsets.all(5),
-                    child: SizedBox(
-                      height: 70,
-                      width: 120,
-                      child: TextButton(
-                        child: Text(
-                          'Đấu',
-                          style: TextStyle(
-                            color: Color.fromRGBO(205, 190, 145, 1),
-                            fontSize: 20,
-                          ),
-                        ),
-                        style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all(
-                                Color.fromRGBO(30, 35, 40, 1))),
-                        onPressed: () {
-                          // action on pressed
                         },
                       ),
                     ),

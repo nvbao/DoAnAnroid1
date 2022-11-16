@@ -2,7 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_doan_demo1/caidatchung_screen.dart';
 import 'package:flutter_doan_demo1/friend_screen.dart';
 
-class ProfileScreen extends StatelessWidget {
+class ProfileScreen extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return ProfileScreenState();
+  }
+}
+
+class ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,18 +24,6 @@ class ProfileScreen extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-          selectedItemColor: Color.fromRGBO(205, 190, 145, 1),
-          backgroundColor: Color.fromRGBO(30, 35, 40, 1),
-          selectedIconTheme: IconThemeData(
-            color: Color.fromRGBO(205, 190, 145, 1),
-            size: 24,
-          ),
-          items: [
-            BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Hồ sơ'),
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Trang chủ'),
-            BottomNavigationBarItem(icon: Icon(Icons.room), label: 'Đấu'),
-          ]),
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
@@ -50,7 +45,6 @@ class ProfileScreen extends StatelessWidget {
                 ),
                 title: Text('L'),
                 subtitle: Text('id của bạn là: 123456'),
-                
               ),
             ),
             Container(
@@ -78,8 +72,17 @@ class ProfileScreen extends StatelessWidget {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Icon(Icons.timelapse_outlined),
-                              Text("Lịch sử đấu"),
+                              Icon(
+                                Icons.timelapse_outlined,
+                                color: Colors.black,
+                              ),
+                              Text(
+                                "Lịch sử đấu",
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 15,
+                                ),
+                              ),
                             ],
                           ),
                         ),
@@ -93,8 +96,17 @@ class ProfileScreen extends StatelessWidget {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Icon(Icons.workspace_premium_outlined),
-                              Text("Thành tích"),
+                              Icon(
+                                Icons.workspace_premium_outlined,
+                                color: Colors.black,
+                              ),
+                              Text(
+                                "Thành tích",
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 15,
+                                ),
+                              ),
                             ],
                           ),
                         ),
@@ -108,8 +120,17 @@ class ProfileScreen extends StatelessWidget {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Icon(Icons.shopping_cart),
-                              Text("Cửa hàng"),
+                              Icon(
+                                Icons.shopping_cart,
+                                color: Colors.black,
+                              ),
+                              Text(
+                                "Cửa hàng",
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 15,
+                                ),
+                              ),
                             ],
                           ),
                         ),

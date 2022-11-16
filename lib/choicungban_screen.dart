@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_doan_demo1/question_screen.dart';
 
-class ChoiCungBanScreen extends StatelessWidget {
+class ChoiCungBanScreen extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return ChoiCungBanScreenState();
+  }
+}
+
+class ChoiCungBanScreenState extends State<ChoiCungBanScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

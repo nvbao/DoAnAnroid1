@@ -25,18 +25,6 @@ class CaiDatScreenState extends State<CaiDatScreen> {
           ),
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-          selectedItemColor: Color.fromRGBO(205, 190, 145, 1),
-          backgroundColor: Color.fromRGBO(30, 35, 40, 1),
-          selectedIconTheme: IconThemeData(
-            color: Color.fromRGBO(205, 190, 145, 1),
-            size: 24,
-          ),
-          items: [
-            BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Hồ sơ'),
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Trang chủ'),
-            BottomNavigationBarItem(icon: Icon(Icons.room), label: 'Đấu'),
-          ]),
       body: Container(
         // padding: EdgeInsets.only(top: 10),
         decoration: BoxDecoration(
@@ -73,8 +61,12 @@ class CaiDatScreenState extends State<CaiDatScreen> {
                           child: SwitchListTile(
                               title: Text(
                                 'Âm thanh',
+                                style: TextStyle(color: Colors.black),
                               ),
-                              secondary: Icon(Icons.volume_down),
+                              secondary: Icon(
+                                Icons.volume_down,
+                                color: Colors.black,
+                              ),
                               value: _toggled1,
                               onChanged: (value) {
                                 setState(() => _toggled1 = value);
@@ -89,8 +81,14 @@ class CaiDatScreenState extends State<CaiDatScreen> {
                             color: Colors.white,
                           ),
                           child: SwitchListTile(
-                              title: Text('Thông báo'),
-                              secondary: Icon(Icons.notifications_outlined),
+                              title: Text(
+                                'Thông báo',
+                                style: TextStyle(color: Colors.black),
+                              ),
+                              secondary: Icon(
+                                Icons.notifications_outlined,
+                                color: Colors.black,
+                              ),
                               value: _toggled2,
                               onChanged: (value) {
                                 setState(() => _toggled2 = value);
@@ -105,8 +103,14 @@ class CaiDatScreenState extends State<CaiDatScreen> {
                             color: Colors.white,
                           ),
                           child: ListTile(
-                            leading: Icon(Icons.logout),
-                            title: Text('Đăng xuất'),
+                            leading: Icon(
+                              Icons.logout,
+                              color: Colors.black,
+                            ),
+                            title: Text(
+                              'Đăng xuất',
+                              style: TextStyle(color: Colors.black),
+                            ),
                           ),
                         ),
                         Container(
@@ -118,8 +122,14 @@ class CaiDatScreenState extends State<CaiDatScreen> {
                             color: Colors.white,
                           ),
                           child: ListTile(
-                            leading: Icon(Icons.delete),
-                            title: Text('Xóa tài khoản'),
+                            leading: Icon(
+                              Icons.delete,
+                              color: Colors.black,
+                            ),
+                            title: Text(
+                              'Xóa tài khoản',
+                              style: TextStyle(color: Colors.black),
+                            ),
                           ),
                         ),
                       ],

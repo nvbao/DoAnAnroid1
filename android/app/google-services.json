@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1056606437094",
+    "project_id": "cauhoitracnghiem-app",
+    "storage_bucket": "cauhoitracnghiem-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1056606437094:android:95bfdb5f3102a937e98527",
+        "android_client_info": {
+          "package_name": "com.example.flutter_doan_demo1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1056606437094-677gjm3in30m22up0k6ipjrt0o5pp765.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-jWR_RofaecJ_XgZQ4M_0fbR0E4eeydA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1056606437094-677gjm3in30m22up0k6ipjrt0o5pp765.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

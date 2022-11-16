@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_doan_demo1/field_screen.dart';
+import 'package:flutter_doan_demo1/hometab.dart';
 import 'package:flutter_doan_demo1/trangchu_screen.dart';
 
 class ResultScreen extends StatelessWidget {
@@ -141,7 +142,7 @@ class ResultScreen extends StatelessWidget {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => TrangChuScreen()));
+                                      builder: (context) => HomeTab()));
                             },
                             //đổi màu cái nút
                             style: ElevatedButton.styleFrom(
