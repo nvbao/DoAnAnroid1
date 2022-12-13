@@ -12,15 +12,14 @@ import 'package:flutter_doan_demo1/login_srceen.dart';
 import 'package:flutter_doan_demo1/modetoan_screen.dart';
 import 'package:flutter_doan_demo1/moiban_screen.dart';
 import 'package:flutter_doan_demo1/profile_screen.dart';
-import 'package:flutter_doan_demo1/question1_screen.dart';
-import 'package:flutter_doan_demo1/question_screen.dart';
-import 'package:flutter_doan_demo1/regimede_screen.dart';
+import 'package:flutter_doan_demo1/question_model.dart';
+import 'package:flutter_doan_demo1/regimedetoan_screen.dart';
 import 'package:flutter_doan_demo1/result_screen.dart';
 import 'package:flutter_doan_demo1/trangchu_screen.dart';
 import 'package:flutter_doan_demo1/welcome_screen.dart';
 import 'package:flutter_doan_demo1/xacnhaloimoi_screen.dart';
 
-//void main() => runApp(DoAnApp());
+/* void main() => runApp(DoAnApp()); */
 Future<void> main(List<String> args) async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -40,26 +39,26 @@ class DoAnApp extends StatelessWidget {
         'home': (context) => HomeTab(),
       },
     );
-    /*return MaterialApp(
+    /* return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: // ChoiCungBanScreen(),
           // XacNhapLoiMoiScreen(),
           // TaoPhongScreen(),
           //CaiDatScreen(),
-          //ProfileScreen(),
-          // FriendScreen(),
-          // ResultScreen(),
-          // Question1Srceen()
-          //  MoiBanScreen(),
-          // RegimeDeScreen(),
-          // LevelDauThuongScreen(),
-          // TrangChuScreen(),
-          //ModeToanScreen(),
-          // FieldScreen(),
-          //ForgetScreen(),
-          // LoginScreen(),
-          WelcomeScreen(),
+          //ProfileScreen(),  
+          FriendScreen(),
+      // ResultScreen(),
+      //  Question1Screen(),
+      //  MoiBanScreen(),
+      // RegimeDeScreen(),
+      // LevelDauThuongScreen(),
+      // TrangChuScreen(),
+      //ModeToanScreen(),
+      // FieldScreen(),
+      //ForgetScreen(),
+      // LoginScreen(),
+      //WelcomeScreen(),
       //HomeTab()
-    );*/
+    ); */
   }
 }

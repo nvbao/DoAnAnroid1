@@ -16,14 +16,36 @@ class WelcomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            const Text(
-              'Câu Hỏi Trắc Nghiệm Online',
-              style: TextStyle(
-                fontSize: 50,
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
+            ClipOval(
+              child: Image.asset(
+                'images/logoCauHoi.png',
+                // fit: BoxFit.cover,
               ),
-              textAlign: TextAlign.center,
+            ),
+            /* Container(
+              margin: EdgeInsets.all(5),
+              height: 200.0,
+              width: 100.0,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(100),
+                //set border radius to 50% of square height and width
+                image: DecorationImage(
+                  image: AssetImage('images/logoCauHoi.png'),
+                  fit: BoxFit.cover, //change image fill type
+                ),
+              ),
+            ), */
+            Container(
+              padding: EdgeInsets.only(top: 10),
+              child: Text(
+                'Câu Hỏi Trắc Nghiệm Online',
+                style: TextStyle(
+                  fontSize: 50,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+                textAlign: TextAlign.center,
+              ),
             ),
             Padding(
               padding: const EdgeInsets.only(top: 12, bottom: 12),

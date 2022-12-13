@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_doan_demo1/regimede_screen.dart';
-import 'package:flutter_doan_demo1/regimekho_screen.dart';
-import 'package:flutter_doan_demo1/regimetrungbinh_screen.dart';
+import 'package:flutter_doan_demo1/regimedetoan_screen.dart';
+import 'package:flutter_doan_demo1/regimekhotoan_screen.dart';
+import 'package:flutter_doan_demo1/regimetrungbinhtoan_screen.dart';
 
 class LevelDauThuongScreen extends StatelessWidget {
   @override
@@ -27,7 +27,7 @@ class LevelDauThuongScreen extends StatelessWidget {
           children: [
             Container(
               padding: EdgeInsets.only(top: 50),
-              margin: const EdgeInsets.all(130),
+              margin: const EdgeInsets.all(120),
               //  alignment: Alignment.bottomCenter,
               child: Column(
                 // mainAxisAlignment: MainAxisAlignment.center,
@@ -53,7 +53,7 @@ class LevelDauThuongScreen extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => RegimeDeScreen()));
+                                  builder: (context) => RegimeDeToanScreen()));
                         },
                       ),
                     ),
@@ -79,7 +79,7 @@ class LevelDauThuongScreen extends StatelessWidget {
                               context,
                               MaterialPageRoute(
                                   builder: (context) =>
-                                      RegimeTrungBinhScreen()));
+                                      RegimeTrungBinhToanScreen()));
                         },
                       ),
                     ),
@@ -104,7 +104,7 @@ class LevelDauThuongScreen extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => RegimeKhoScreen()));
+                                  builder: (context) => RegimeKhoToanScreen()));
                         },
                       ),
                     ),

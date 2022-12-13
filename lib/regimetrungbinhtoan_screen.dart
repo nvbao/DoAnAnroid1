@@ -1,15 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_doan_demo1/home_quiztoan.dart';
 import 'package:flutter_doan_demo1/moiban_screen.dart';
-import 'package:flutter_doan_demo1/question_screen.dart';
 
-class RegimeKhoScreen extends StatelessWidget {
+class RegimeTrungBinhToanScreen extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return RegimeTrungBinhToanScreenState();
+  }
+}
+
+class RegimeTrungBinhToanScreenState extends State<RegimeTrungBinhToanScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true, //chữ căn giữa
         title: const Text(
-          'Khó',
+          'Trung bình',
           style: TextStyle(color: Color.fromRGBO(205, 190, 145, 1)),
         ),
         backgroundColor: Color.fromRGBO(30, 35, 40, 1),
@@ -51,7 +58,7 @@ class RegimeKhoScreen extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => QuestionScreen()));
+                                  builder: (context) => QuestionToanScreen()));
                         },
                       ),
                     ),

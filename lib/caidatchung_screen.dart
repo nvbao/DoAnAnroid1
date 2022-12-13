@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_doan_demo1/welcome_screen.dart';
 
 class CaiDatScreen extends StatefulWidget {
   @override
@@ -61,7 +62,9 @@ class CaiDatScreenState extends State<CaiDatScreen> {
                           child: SwitchListTile(
                               title: Text(
                                 'Âm thanh',
-                                style: TextStyle(color: Colors.black),
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontSize: 18, color: Colors.black),
                               ),
                               secondary: Icon(
                                 Icons.volume_down,
@@ -83,7 +86,9 @@ class CaiDatScreenState extends State<CaiDatScreen> {
                           child: SwitchListTile(
                               title: Text(
                                 'Thông báo',
-                                style: TextStyle(color: Colors.black),
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontSize: 18, color: Colors.black),
                               ),
                               secondary: Icon(
                                 Icons.notifications_outlined,
@@ -102,14 +107,52 @@ class CaiDatScreenState extends State<CaiDatScreen> {
                             borderRadius: BorderRadius.circular(10),
                             color: Colors.white,
                           ),
-                          child: ListTile(
-                            leading: Icon(
-                              Icons.logout,
-                              color: Colors.black,
-                            ),
-                            title: Text(
-                              'Đăng xuất',
-                              style: TextStyle(color: Colors.black),
+                          child: TextButton(
+                            onPressed: () {
+                              Navigator.pop(context);
+                              showDialog(
+                                  context: context,
+                                  builder: (context) {
+                                    return AlertDialog(
+                                      title: Text(
+                                          'Bạn có muốn đăng xuất khỏi ứng dụng!!'),
+                                      actions: [
+                                        TextButton(
+                                          onPressed: () {
+                                            Navigator.pop(context);
+                                          },
+                                          child: Text('NO'),
+                                        ),
+                                        TextButton(
+                                          onPressed: () {
+                                            Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        WelcomeScreen()));
+                                          },
+                                          child: Text('YES'),
+                                        ),
+                                      ],
+                                    );
+                                  });
+                            },
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Icon(
+                                  Icons.logout,
+                                  color: Colors.black,
+                                ),
+                                Padding(padding: EdgeInsets.only(left: 50)),
+                                Text(
+                                  'Đăng xuất',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                      fontSize: 20, color: Colors.black),
+                                ),
+                              ],
                             ),
                           ),
                         ),
@@ -121,14 +164,23 @@ class CaiDatScreenState extends State<CaiDatScreen> {
                             borderRadius: BorderRadius.circular(10),
                             color: Colors.white,
                           ),
-                          child: ListTile(
-                            leading: Icon(
-                              Icons.delete,
-                              color: Colors.black,
-                            ),
-                            title: Text(
-                              'Xóa tài khoản',
-                              style: TextStyle(color: Colors.black),
+                          child: TextButton(
+                            onPressed: () {},
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Icon(
+                                  Icons.delete,
+                                  color: Colors.black,
+                                ),
+                                Padding(padding: EdgeInsets.only(left: 50)),
+                                Text(
+                                  'Xóa tài khoản',
+                                  style: TextStyle(
+                                      fontSize: 20, color: Colors.black),
+                                ),
+                              ],
                             ),
                           ),
                         ),

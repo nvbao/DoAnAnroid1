@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_doan_demo1/questionnext_screen.dart';
+import 'package:flutter_doan_demo1/nextquestion.dart';
 
 class OtpTimer extends StatefulWidget {
   @override
@@ -25,8 +25,12 @@ class _OtpTimerState extends State<OtpTimer> {
         print(timer.tick);
         currentSeconds = timer.tick;
         if (timer.tick == timerMaxSeconds) {
-          Navigator.push(context,
-              MaterialPageRoute(builder: (context) => QuestionNextScreen()));
+          {
+            NextQuestion();
+          }
+          timer.cancel();
+          /*  Navigator.push(context,
+              MaterialPageRoute(builder: (context) => QuestionNextScreen())); */
         }
       });
     });

@@ -1,6 +1,8 @@
-import 'package:flutter/material.dart';
+/* import 'package:flutter/material.dart';
 import 'package:flutter_doan_demo1/caidatchung_screen.dart';
 import 'package:flutter_doan_demo1/friend_screen.dart';
+import 'package:flutter_doan_demo1/lichsudau_screen.dart';
+import 'package:flutter_doan_demo1/xephang_screen.dart';
 
 class ProfileScreen extends StatefulWidget {
   @override
@@ -40,8 +42,12 @@ class ProfileScreenState extends State<ProfileScreen> {
               ),
               child: ListTile(
                 leading: CircleAvatar(
+                  backgroundColor: Colors.blue,
                   radius: 50,
-                  child: Icon(Icons.person_outline_outlined),
+                  child: Icon(
+                    Icons.person_outline_outlined,
+                    color: Colors.orange,
+                  ),
                 ),
                 title: Text('L'),
                 subtitle: Text('id của bạn là: 123456'),
@@ -65,49 +71,79 @@ class ProfileScreenState extends State<ProfileScreen> {
                         Container(
                           height: 100,
                           width: 80,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
+                          /* decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
                             color: Colors.white,
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(
-                                Icons.timelapse_outlined,
-                                color: Colors.black,
-                              ),
-                              Text(
-                                "Lịch sử đấu",
-                                style: TextStyle(
+                          ),*/
+                          child: TextButton(
+                            onPressed: () {
+                              Navigator.pop(context);
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => LichSuDau()));
+                            },
+                            //đổi màu cái nút
+                            style: ElevatedButton.styleFrom(
+                                fixedSize: const Size(200, 50),
+                                backgroundColor: Colors.white),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.timelapse_outlined,
                                   color: Colors.black,
-                                  fontSize: 15,
                                 ),
-                              ),
-                            ],
+                                Text(
+                                  'Lịch Sử Đấu',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                         Container(
                           height: 100,
                           width: 80,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
+                          /* decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
                             color: Colors.white,
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(
-                                Icons.workspace_premium_outlined,
-                                color: Colors.black,
-                              ),
-                              Text(
-                                "Thành tích",
-                                style: TextStyle(
+                          ),*/
+                          child: TextButton(
+                            onPressed: () {
+                              Navigator.pop(context);
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => XepHangScreen()));
+                            },
+                            //đổi màu cái nút
+                            style: ElevatedButton.styleFrom(
+                                fixedSize: const Size(200, 50),
+                                backgroundColor: Colors.white),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.workspace_premium_outlined,
                                   color: Colors.black,
-                                  fontSize: 15,
                                 ),
-                              ),
-                            ],
+                                Text(
+                                  'Xếp hạng',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                         Container(
@@ -225,3 +261,4 @@ class ProfileScreenState extends State<ProfileScreen> {
     );
   }
 }
+ */

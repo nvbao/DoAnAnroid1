@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_doan_demo1/question_screen.dart';
+import 'package:flutter_doan_demo1/home_quiztoan.dart';
 
 class ChoiCungBanScreen extends StatefulWidget {
   @override
@@ -122,52 +122,6 @@ class ChoiCungBanScreenState extends State<ChoiCungBanScreen> {
                                       color: Colors.white70, width: 1),
                                   borderRadius: BorderRadius.circular(10),
                                 ),
-                                //  margin: EdgeInsets.all(20.0),
-                                child: Container(
-                                  child: Column(
-                                    children: <Widget>[
-                                      ListTile(
-                                        title: Text(
-                                          'Chế độ: Đấu thường',
-                                          style: TextStyle(
-                                              fontSize: 20,
-                                              color: Colors.black),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                              Card(
-                                color: Colors.white,
-                                shape: RoundedRectangleBorder(
-                                  side: BorderSide(
-                                      color: Colors.white70, width: 1),
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                                //  margin: EdgeInsets.all(20.0),
-                                child: Container(
-                                  child: Column(
-                                    children: <Widget>[
-                                      ListTile(
-                                        title: Text(
-                                          'Cấp độ: Khó',
-                                          style: TextStyle(
-                                              fontSize: 20,
-                                              color: Colors.black),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                              Card(
-                                color: Colors.white,
-                                shape: RoundedRectangleBorder(
-                                  side: BorderSide(
-                                      color: Colors.white70, width: 1),
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
                                 // margin: EdgeInsets.all(20.0),
                                 child: Container(
                                   child: Column(
@@ -217,7 +171,8 @@ class ChoiCungBanScreenState extends State<ChoiCungBanScreen> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => QuestionScreen()));
+                                      builder: (context) =>
+                                          QuestionToanScreen()));
                             },
                             //đổi màu cái nút
                             style: ElevatedButton.styleFrom(

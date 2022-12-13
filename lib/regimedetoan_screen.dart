@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_doan_demo1/home_quiztoan.dart';
 import 'package:flutter_doan_demo1/moiban_screen.dart';
-import 'package:flutter_doan_demo1/question_screen.dart';
 
-class RegimeDeScreen extends StatelessWidget {
+class RegimeDeToanScreen extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return RegimeDeToanScreenState();
+  }
+}
+
+class RegimeDeToanScreenState extends State<RegimeDeToanScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,7 +58,7 @@ class RegimeDeScreen extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => QuestionScreen()));
+                                  builder: (context) => QuestionToanScreen()));
                         },
                       ),
                     ),

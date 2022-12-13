@@ -32,7 +32,7 @@ class LoginScreenState extends State<LoginScreen> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             const Text(
-              'Câu Hỏi Trắc Nghiệm Online',
+              'Đăng Nhập',
               style: TextStyle(
                 fontSize: 50,
                 fontWeight: FontWeight.bold,
@@ -46,6 +46,7 @@ class LoginScreenState extends State<LoginScreen> {
                 controller: txtEmail,
                 keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
+                  labelText: 'Nhập email',
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(
                       color: Colors.white,
@@ -65,6 +66,7 @@ class LoginScreenState extends State<LoginScreen> {
                 controller: txtPass,
                 obscureText: true,
                 decoration: InputDecoration(
+                  labelText: 'Nhập password',
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(
                       color: Colors.white,
@@ -72,7 +74,7 @@ class LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                   prefixIcon: Icon(
-                    Icons.password,
+                    Icons.lock,
                     color: Colors.white,
                   ),
                 ),

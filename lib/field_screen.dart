@@ -1,4 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_doan_demo1/home_quizanh.dart';
+import 'package:flutter_doan_demo1/home_quizdia.dart';
+import 'package:flutter_doan_demo1/home_quizgiaoduc.dart';
+import 'package:flutter_doan_demo1/home_quizhoa.dart';
+import 'package:flutter_doan_demo1/home_quizly.dart';
+import 'package:flutter_doan_demo1/home_quizsinh.dart';
+import 'package:flutter_doan_demo1/home_quizsu.dart';
+import 'package:flutter_doan_demo1/home_quiztoan.dart';
 import 'package:flutter_doan_demo1/modedialy_screen.dart';
 import 'package:flutter_doan_demo1/modegiaoduc_screen.dart';
 import 'package:flutter_doan_demo1/modehoahoc_screen.dart';
@@ -72,7 +80,7 @@ class FieldScreenState extends State<FieldScreen> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            ModeToanScreen()));
+                                            QuestionToanScreen()));
                               },
                             ),
                           ),
@@ -97,7 +105,7 @@ class FieldScreenState extends State<FieldScreen> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            ModeDiaLyScreen()));
+                                            QuestionDiaScreen()));
                               },
                             ),
                           ),
@@ -132,7 +140,7 @@ class FieldScreenState extends State<FieldScreen> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            ModeVatLyScreen()));
+                                            QuestionLyScreen()));
                               },
                             ),
                           ),
@@ -157,7 +165,7 @@ class FieldScreenState extends State<FieldScreen> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            ModeGiaoDucScreen()));
+                                            QuestionGiaoDucScreen()));
                               },
                             ),
                           ),
@@ -192,7 +200,7 @@ class FieldScreenState extends State<FieldScreen> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            ModeHoaHocScreen()));
+                                            QuestionHoaScreen()));
                               },
                             ),
                           ),
@@ -217,7 +225,7 @@ class FieldScreenState extends State<FieldScreen> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            ModeTiengAnhScreen()));
+                                            QuestionAnhScreen()));
                               },
                             ),
                           ),
@@ -252,7 +260,7 @@ class FieldScreenState extends State<FieldScreen> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            ModeLichSuScreen()));
+                                            QuestionSuScreen()));
                               },
                             ),
                           ),
@@ -277,7 +285,7 @@ class FieldScreenState extends State<FieldScreen> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            ModeSinhHocScreen()));
+                                            QuestionSinhScreen()));
                               },
                             ),
                           ),

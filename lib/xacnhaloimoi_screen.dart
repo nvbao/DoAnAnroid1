@@ -12,7 +12,7 @@ class XacNhapLoiMoiScreen extends StatelessWidget {
           'Xác nhận lời mời',
           style: TextStyle(color: Color.fromRGBO(205, 190, 145, 1)),
         ),
-        backgroundColor: Color.fromRGBO(30, 35, 40, 1),
+        backgroundColor: Color.fromARGB(255, 72, 100, 128),
       ),
       body: Container(
         padding: EdgeInsets.all(10),
