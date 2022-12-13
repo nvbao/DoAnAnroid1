@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_doan_demo1/field_screen.dart';
-import 'package:flutter_doan_demo1/profile_screen.dart';
 
 class TrangChuScreen extends StatefulWidget {
   @override

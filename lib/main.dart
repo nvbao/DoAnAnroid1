@@ -11,7 +11,6 @@ import 'package:flutter_doan_demo1/leveldauthuong_screen.dart';
 import 'package:flutter_doan_demo1/login_srceen.dart';
 import 'package:flutter_doan_demo1/modetoan_screen.dart';
 import 'package:flutter_doan_demo1/moiban_screen.dart';
-import 'package:flutter_doan_demo1/profile_screen.dart';
 import 'package:flutter_doan_demo1/question_model.dart';
 import 'package:flutter_doan_demo1/regimedetoan_screen.dart';
 import 'package:flutter_doan_demo1/result_screen.dart';

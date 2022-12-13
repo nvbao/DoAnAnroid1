@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_doan_demo1/hometab.dart';
-import 'package:flutter_doan_demo1/profile_screen.dart';
 import 'package:flutter_doan_demo1/trangchu_screen.dart';
 
 class XepHangScreen extends StatefulWidget {

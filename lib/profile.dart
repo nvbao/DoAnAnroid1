@@ -6,6 +6,7 @@ import 'package:flutter_doan_demo1/caidatchung_screen.dart';
 import 'package:flutter_doan_demo1/cuahang.dart';
 import 'package:flutter_doan_demo1/friend_screen.dart';
 import 'package:flutter_doan_demo1/lichsudau_screen.dart';
+import 'package:flutter_doan_demo1/profile_detail.dart';
 import 'package:flutter_doan_demo1/xephang_screen.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -104,11 +105,10 @@ Map<String,dynamic> userData = vari as Map<String,dynamic>;
                               title: Text("Tên: " + e['name']),
                               subtitle: Text("id: " + e['id']),
                               onTap: () {
-                                /* Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              ProfileDetail())); */
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => ProfileDetail()));
                               },
                             ),
                           ),

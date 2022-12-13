@@ -16,6 +16,8 @@ class ForgetScreenState extends State<ForgetScreen> {
   String _name = '';
   String _avatar = '';
   String _coverImage = '';
+  String _phone = '';
+  String _age = '';
   final _auth = FirebaseAuth.instance;
   @override
   Widget build(BuildContext context) {
@@ -87,6 +89,21 @@ class ForgetScreenState extends State<ForgetScreen> {
                 try {
                   final User? user = _auth.currentUser;
                   final _uid = user?.uid;
+                  /*   final newUser = _auth
+                      .createUserWithEmailAndPassword(
+                          email: txtEmail.text, password: txtPass.text)
+                      .then((value) {
+                    FirebaseFirestore.instance
+                        .collection('users')
+                        .doc(_uid)
+                        .set({
+                      "email": value.user?.email,
+                      "id": _uid,
+                      "name": _name,
+                      "coverImage": _coverImage,
+                      "avatar": _avatar,
+                    });
+                  }); */
                   final newUser = _auth
                       .createUserWithEmailAndPassword(
                           email: txtEmail.text, password: txtPass.text)
@@ -100,6 +117,8 @@ class ForgetScreenState extends State<ForgetScreen> {
                       "name": _name,
                       "coverImage": _coverImage,
                       "avatar": _avatar,
+                      "phone": _phone,
+                      "age": _age,
                     });
                   });
                   if (newUser != null) {
