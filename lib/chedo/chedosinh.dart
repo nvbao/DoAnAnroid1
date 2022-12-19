@@ -1,22 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_doan_demo1/home_quiztoan.dart';
-import 'package:flutter_doan_demo1/moiban_screen.dart';
+import 'package:flutter_doan_demo1/cauhoide/home_quizsinh.dart';
+import 'package:flutter_doan_demo1/cauhoikho/home_quizsinhkho.dart';
+import 'package:flutter_doan_demo1/cauhoitrungbinh/home_quizsinhtb.dart';
 
-class RegimeTrungBinhToanScreen extends StatefulWidget {
+class CheDoSinh extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return RegimeTrungBinhToanScreenState();
+    return CheDoSinhState();
   }
 }
 
-class RegimeTrungBinhToanScreenState extends State<RegimeTrungBinhToanScreen> {
+class CheDoSinhState extends State<CheDoSinh> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true, //chữ căn giữa
         title: const Text(
-          'Trung bình',
+          'Sinh học',
           style: TextStyle(color: Color.fromRGBO(205, 190, 145, 1)),
         ),
         backgroundColor: Color.fromRGBO(30, 35, 40, 1),
@@ -32,23 +33,24 @@ class RegimeTrungBinhToanScreenState extends State<RegimeTrungBinhToanScreen> {
         child: Column(
           children: [
             Container(
-              padding: EdgeInsets.only(top: 190),
+              width: double.infinity,
+              margin: const EdgeInsets.only(top: 150),
               //  alignment: Alignment.bottomCenter,
               child: Column(
                 // mainAxisAlignment: MainAxisAlignment.center,
                 // crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Container(
-                    padding: EdgeInsets.all(20),
+                    padding: EdgeInsets.all(5),
                     child: SizedBox(
-                      height: 80,
-                      width: 120,
+                      height: 100,
+                      width: 150,
                       child: TextButton(
                         child: Text(
-                          'Chơi đơn',
+                          'Dễ',
                           style: TextStyle(
                             color: Color.fromRGBO(205, 190, 145, 1),
-                            fontSize: 20,
+                            fontSize: 25,
                           ),
                         ),
                         style: ButtonStyle(
@@ -58,22 +60,22 @@ class RegimeTrungBinhToanScreenState extends State<RegimeTrungBinhToanScreen> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => QuestionToanScreen()));
+                                  builder: (context) => QuestionSinhScreen()));
                         },
                       ),
                     ),
                   ),
                   Container(
-                    padding: EdgeInsets.all(20),
+                    padding: EdgeInsets.all(25),
                     child: SizedBox(
-                      height: 80,
-                      width: 120,
+                      height: 100,
+                      width: 150,
                       child: TextButton(
                         child: Text(
-                          'Mời bạn',
+                          'Trung Bình',
                           style: TextStyle(
                             color: Color.fromRGBO(205, 190, 145, 1),
-                            fontSize: 20,
+                            fontSize: 25,
                           ),
                         ),
                         style: ButtonStyle(
@@ -83,17 +85,38 @@ class RegimeTrungBinhToanScreenState extends State<RegimeTrungBinhToanScreen> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => MoiBanScreen()));
+                                  builder: (context) => QuestionSinhTB()));
+                        },
+                      ),
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(25),
+                    child: SizedBox(
+                      height: 100,
+                      width: 150,
+                      child: TextButton(
+                        child: Text(
+                          'Khó',
+                          style: TextStyle(
+                            color: Color.fromRGBO(205, 190, 145, 1),
+                            fontSize: 25,
+                          ),
+                        ),
+                        style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all(
+                                Color.fromRGBO(30, 35, 40, 1))),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => QuestionSinhKho()));
                         },
                       ),
                     ),
                   ),
                 ],
               ),
-            ),
-            //Container chứa hồ sơ, trang chủ ,đấu
-            Container(
-              padding: EdgeInsets.only(top: 150),
             ),
           ],
         ),

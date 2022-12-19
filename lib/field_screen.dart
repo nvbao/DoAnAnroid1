@@ -1,20 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_doan_demo1/home_quizanh.dart';
-import 'package:flutter_doan_demo1/home_quizdia.dart';
-import 'package:flutter_doan_demo1/home_quizgiaoduc.dart';
-import 'package:flutter_doan_demo1/home_quizhoa.dart';
-import 'package:flutter_doan_demo1/home_quizly.dart';
-import 'package:flutter_doan_demo1/home_quizsinh.dart';
-import 'package:flutter_doan_demo1/home_quizsu.dart';
-import 'package:flutter_doan_demo1/home_quiztoan.dart';
-import 'package:flutter_doan_demo1/modedialy_screen.dart';
-import 'package:flutter_doan_demo1/modegiaoduc_screen.dart';
-import 'package:flutter_doan_demo1/modehoahoc_screen.dart';
-import 'package:flutter_doan_demo1/modelichsu_screen.dart';
-import 'package:flutter_doan_demo1/modesinhhoc_screen.dart';
-import 'package:flutter_doan_demo1/modetienganh_screen.dart';
-import 'package:flutter_doan_demo1/modetoan_screen.dart';
-import 'package:flutter_doan_demo1/modevatly_screen.dart';
+import 'package:flutter_doan_demo1/chedo/chedoanh.dart';
+import 'package:flutter_doan_demo1/chedo/chedodia.dart';
+import 'package:flutter_doan_demo1/chedo/chedogiaoduc.dart';
+import 'package:flutter_doan_demo1/chedo/chedohoa.dart';
+import 'package:flutter_doan_demo1/chedo/chedoly.dart';
+import 'package:flutter_doan_demo1/chedo/chedosinh.dart';
+import 'package:flutter_doan_demo1/chedo/chedosu.dart';
+import 'package:flutter_doan_demo1/chedo/chedotoan.dart';
 import 'package:flutter_doan_demo1/trangchu_screen.dart';
 
 class FieldScreen extends StatefulWidget {
@@ -79,8 +71,7 @@ class FieldScreenState extends State<FieldScreen> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) =>
-                                            QuestionToanScreen()));
+                                        builder: (context) => CheDoToan()));
                               },
                             ),
                           ),
@@ -104,8 +95,7 @@ class FieldScreenState extends State<FieldScreen> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) =>
-                                            QuestionDiaScreen()));
+                                        builder: (context) => CheDoDia()));
                               },
                             ),
                           ),
@@ -139,8 +129,7 @@ class FieldScreenState extends State<FieldScreen> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) =>
-                                            QuestionLyScreen()));
+                                        builder: (context) => CheDoLy()));
                               },
                             ),
                           ),
@@ -164,8 +153,7 @@ class FieldScreenState extends State<FieldScreen> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) =>
-                                            QuestionGiaoDucScreen()));
+                                        builder: (context) => CheDoGiaoDuc()));
                               },
                             ),
                           ),
@@ -199,8 +187,7 @@ class FieldScreenState extends State<FieldScreen> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) =>
-                                            QuestionHoaScreen()));
+                                        builder: (context) => CheDoHoa()));
                               },
                             ),
                           ),
@@ -224,8 +211,7 @@ class FieldScreenState extends State<FieldScreen> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) =>
-                                            QuestionAnhScreen()));
+                                        builder: (context) => CheDoAnh()));
                               },
                             ),
                           ),
@@ -259,8 +245,7 @@ class FieldScreenState extends State<FieldScreen> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) =>
-                                            QuestionSuScreen()));
+                                        builder: (context) => CheDoSu()));
                               },
                             ),
                           ),
@@ -284,8 +269,7 @@ class FieldScreenState extends State<FieldScreen> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) =>
-                                            QuestionSinhScreen()));
+                                        builder: (context) => CheDoSinh()));
                               },
                             ),
                           ),

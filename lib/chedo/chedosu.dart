@@ -1,22 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_doan_demo1/leveldauthuong_screen.dart';
-import 'package:flutter_doan_demo1/levelxephang_screen.dart';
+import 'package:flutter_doan_demo1/cauhoide/home_quizsu.dart';
+import 'package:flutter_doan_demo1/cauhoikho/home_quizsukho.dart';
+import 'package:flutter_doan_demo1/cauhoitrungbinh/home_quizsutb.dart';
 
-class ModeVatLyScreen extends StatefulWidget {
+class CheDoSu extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return ModeVatLyScreenState();
+    return CheDoSuState();
   }
 }
 
-class ModeVatLyScreenState extends State<ModeVatLyScreen> {
+class CheDoSuState extends State<CheDoSu> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true, //chữ căn giữa
         title: const Text(
-          'Vật lý',
+          'Lịch sử',
           style: TextStyle(color: Color.fromRGBO(205, 190, 145, 1)),
         ),
         backgroundColor: Color.fromRGBO(30, 35, 40, 1),
@@ -32,7 +33,8 @@ class ModeVatLyScreenState extends State<ModeVatLyScreen> {
         child: Column(
           children: [
             Container(
-              margin: const EdgeInsets.only(top: 190),
+              width: double.infinity,
+              margin: const EdgeInsets.only(top: 150),
               //  alignment: Alignment.bottomCenter,
               child: Column(
                 // mainAxisAlignment: MainAxisAlignment.center,
@@ -45,7 +47,7 @@ class ModeVatLyScreenState extends State<ModeVatLyScreen> {
                       width: 150,
                       child: TextButton(
                         child: Text(
-                          'Đấu thường',
+                          'Dễ',
                           style: TextStyle(
                             color: Color.fromRGBO(205, 190, 145, 1),
                             fontSize: 25,
@@ -58,8 +60,7 @@ class ModeVatLyScreenState extends State<ModeVatLyScreen> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) =>
-                                      LevelDauThuongScreen()));
+                                  builder: (context) => QuestionSuScreen()));
                         },
                       ),
                     ),
@@ -71,7 +72,7 @@ class ModeVatLyScreenState extends State<ModeVatLyScreen> {
                       width: 150,
                       child: TextButton(
                         child: Text(
-                          'Xếp hạng',
+                          'Trung Bình',
                           style: TextStyle(
                             color: Color.fromRGBO(205, 190, 145, 1),
                             fontSize: 25,
@@ -84,17 +85,38 @@ class ModeVatLyScreenState extends State<ModeVatLyScreen> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => LevelXepHangScreen()));
+                                  builder: (context) => QuestionSuTB()));
+                        },
+                      ),
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(25),
+                    child: SizedBox(
+                      height: 100,
+                      width: 150,
+                      child: TextButton(
+                        child: Text(
+                          'Khó',
+                          style: TextStyle(
+                            color: Color.fromRGBO(205, 190, 145, 1),
+                            fontSize: 25,
+                          ),
+                        ),
+                        style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all(
+                                Color.fromRGBO(30, 35, 40, 1))),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => QuestionSuKho()));
                         },
                       ),
                     ),
                   ),
                 ],
               ),
-            ),
-            //Container chứa hồ sơ, trang chủ ,đấu
-            Container(
-              padding: EdgeInsets.only(top: 170),
             ),
           ],
         ),

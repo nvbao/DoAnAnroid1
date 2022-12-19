@@ -7,18 +7,18 @@ import 'package:flutter_doan_demo1/question_model.dart';
 import 'package:flutter_doan_demo1/question_widget.dart';
 import 'package:flutter_doan_demo1/result_screen.dart';
 
-class QuestionGiaoDucScreen extends StatefulWidget {
-  const QuestionGiaoDucScreen({
+class QuestionSuKho extends StatefulWidget {
+  const QuestionSuKho({
     Key? key,
   }) : super(key: key);
 
   @override
   State<StatefulWidget> createState() {
-    return _QuestionGiaoDucScreen();
+    return _QuestionSuKho();
   }
 }
 
-class _QuestionGiaoDucScreen extends State<QuestionGiaoDucScreen> {
+class _QuestionSuKho extends State<QuestionSuKho> {
   // var db = DBconnect();
 
   /* late Future _question; */
@@ -107,108 +107,121 @@ class _QuestionGiaoDucScreen extends State<QuestionGiaoDucScreen> {
     Question(
       id: '1',
       title:
-          'Câu tục ngữ: Anh em như thể tay chân, rách lành đùm bọc dở hay đỡ đần khuyên chúng ta điều gì?',
+          'Lực lượng chủ chốt của phong trào dân tộc trong những năm Chiến tranh thế giới thứ nhất là:',
       options: {
-        'Anh, em phải đoàn kết, yêu thương lẫn nhau': true,
-        'Anh, em phải trung thực với nhau': false,
-        'Anh, em phải lo cho nhau': false,
-        'Anh, em phải có trách nhiệm với nhau': false
+        'A. Tư sản dân tộc': false,
+        'B. Tiểu tư sản': false,
+        'C. Công nhân': false,
+        'D. Công nhân và nông dân': true
       },
+      answer: 'D',
     ),
     Question(
       id: '2',
       title:
-          'Quyền và nghĩa vụ của công dân trong gia đình đề cập dến các mối quan hệ nào?',
+          'Hình thức đấu tranh kinh tế của công nhân Việt Nam trong những năm Chiến tranh thế giới thứ nhất là',
       options: {
-        'Cha mẹ và con cái': false,
-        'Anh chị em': false,
-        'Ông bà và con cháu': false,
-        'Cả A,B,C': true
+        'A. chống cướp phạt lương': true,
+        'B. đòi tăng lương': false,
+        'C. đòi giảm giờ làm': false,
+        'D. chống làm việc quá 12 giờ trong ngày': false
       },
+      answer: 'A',
     ),
     Question(
       id: '3',
-      title: 'Các hành động thể hiện quyền và nghĩa vụ của cha mẹ là?',
+      title:
+          'Đối với các nhà yêu nước tiền bối, Nguyễn Tất Thành có thái độ như thế nào?',
       options: {
-        'Nuôi dạy con': false,
-        'Cho con đi học': false,
-        'Dạy con học bài': false,
-        'Cả A,B,C': true
+        'A. Tán thành con đường cứu nước của họ': false,
+        'B. Khâm phục tinh thần yêu nước của họ': false,
+        'C. Khâm phục tinh thần yêu nước nhưng không tán thành con đường cứu nước của họ':
+            true,
+        'D. Không tán thành con đường cứu nước của họ': false
       },
+      answer: 'C',
     ),
     Question(
       id: '4',
-      title: 'Các hành động thể hiện quyền và nghĩa vụ của ông bà là?',
+      title:
+          'Ở các tỉnh trung du Bắc Kì, có tới 251 ha đất trồng lúa chuyển sang trồng:',
       options: {
-        'Dạy cháu điều hay lẽ phải': false,
-        'Chăm sóc các cháu': false,
-        'Dạy các cháu cách ứng xử, giao tiếp với người ngoài': false,
-        'Cả A,B,C': true
+        'A. thầu dầu': false,
+        'B. lạc': false,
+        'C. đậu tây': true,
+        'D. bông': false
       },
+      answer: 'C',
     ),
     Question(
       id: '5',
       title:
-          'Bố và mẹ bất đồng trong quan điểm nuôi dạy con theo cách dạy của Nhật Bản và Việt Nam, ép con phải học theo những thứ mà bố mẹ thích. Việc làm đó nói lên điều gì?',
+          'Phạm Văn Phi (Vinh) trong những năm Chiến tranh thế giới thứ nhất đã lập ra công ty?',
       options: {
-        'Bố mẹ không tôn trọng ý kiến của con': true,
-        'Bố mẹ không tôn trọng con': false,
-        'Bố mẹ vi phạm pháp luật': false,
-        'Bố mẹ không có nhận thức đúng đắn': false
+        'A. đóng tàu': false,
+        'B. xe hơi': true,
+        'C. in': false,
+        'D. xay xát': false
       },
+      answer: 'B',
     ),
     Question(
       id: '6',
-      title: 'Chế độ hôn nhân của nước ta là?',
+      title: 'Đối tượng chính mà chính quyền thực dân Pháp bắt lính là ai?',
       options: {
-        'Bình đẳng, tự nguyện, tiến bộ': false,
-        'Bình đẳng, một vợ một chồng': false,
-        'Bình đẳng, tiến bộ, một vợ, một chồng': false,
-        'Bình đẳng, tự nguyện, tiến bộ, một vợ, một chồng': true
+        'A. Công nhân': false,
+        'B. Tư sản': false,
+        'C. Tiểu tư sản': false,
+        'D. Nông dân': true
       },
+      answer: 'D',
     ),
     Question(
       id: '7',
       title:
-          'Quyền và nghĩa vụ của các thành viên trong gia đình được thể hiện rõ nhất tại đâu?',
+          'Đâu là lực lượng chủ chốt của phong trào dân tộc những năm Chiến tranh thế giới thứ nhất?',
       options: {
-        'Luật Hôn nhân và Gia đình': true,
-        'Luật Trẻ em': false,
-        'Luật lao động': false,
-        'Luật chăm sóc và bảo vệ trẻ em': false
+        'A. Nông dân': false,
+        'B. Công dân': false,
+        'C. Công dân và nông dân': true,
+        'D. Địa chủ phong kiến': false
       },
+      answer: 'C',
     ),
     Question(
       id: '8',
-      title: 'Các hành vi: Đánh chửi bố mẹ, vô lễ với ông bà vi phạm điều gì?',
+      title:
+          'Chiến tranh thế giới thứ nhất làm cho việc trao đổi hàng hóa giữa Pháp với Đông Dương thế nào?',
       options: {
-        'Quyền và nghĩa vụ của cha mẹ': false,
-        'Quyền và nghĩa vụ của con, cháu': true,
-        'Quyền và nghĩa vụ của các thành viên trong gia đình': false,
-        'Quyền và nghĩa vụ của trẻ em': false
+        'A. Hàng hóa nhập khẩu từ Pháp sang Đông Dương giảm': true,
+        'B. Hàng hóa nhập khẩu từ Pháp sang Đông Dương tăng lên': false,
+        'C. Hàng hóa xuất khẩu từ Pháp sang Đông Dương giảm': false,
+        'D. Hàng hóa xuất khẩu từ Pháp sang Đông Dương tăng lên': false
       },
+      answer: 'A',
     ),
     Question(
       id: '9',
       title:
-          'Gia đình K lợi dụng mẹ già chiếm đoạt tài sản, chuyển nhượng sổ đỏ để lấy đất sau đó bán và đưa mẹ chồng vào trại dưỡng lão để không phải trông nom, chăm sóc. Việc làm đó nói lên điều gì ?',
+          'Người đứng đầu phái chủ chiến chủ trương chống Pháp trong triều đình Huế là',
       options: {
-        'Con cái bất hiếu với cha mẹ': true,
-        'Con cái yêu thương cha mẹ': false,
-        'Con cái không tôn trọng cha mẹ': false,
-        'Con cái tôn trọng cha mẹ': false
+        'A. An Dương Vương': false,
+        'B. Tôn Thất Thuyết': true,
+        'C. Hùng Vương': false,
+        'D. Liên Châu': false
       },
+      answer: 'B',
     ),
     Question(
       id: '10',
-      title:
-          'Đối với các hành vi ngược đãi, xúc phạm cha mẹ, ông bà chúng ta cần phải làm gì?',
+      title: 'Phong trào Cần vương diễn ra sôi nổi nhất ở đâu?',
       options: {
-        'Lên án, phê phán, tố cáo': true,
-        'Nêu gương': false,
-        'Học làm theo': false,
-        'Mặc kệ vì không liên quan đến mình': false
+        'A. Bắc Kì và Trung Kì': true,
+        'B. Nam Kì và Bắc Kì': false,
+        'C. Trung Kì và Nam Kì': false,
+        'D. cả ba đáp án trên': false
       },
+      answer: 'A',
     ),
   ];
 
@@ -249,7 +262,8 @@ class _QuestionGiaoDucScreen extends State<QuestionGiaoDucScreen> {
                                               builder: (context) {
                                                 return AlertDialog(
                                                   title: Text('Mua đáp án'),
-                                                  content: Text('Đáp án lả: '),
+                                                  content: Text(
+                                                      'Đáp án là: ${_questions[index].answer} '),
                                                   actions: [
                                                     TextButton(
                                                       onPressed: () {
@@ -387,113 +401,5 @@ class _QuestionGiaoDucScreen extends State<QuestionGiaoDucScreen> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
-    /* return FutureBuilder(
-      future: _question as Future<List<Question>>,
-      builder: (ctx, snapshot) {
-        if (snapshot.connectionState == ConnectionState.done) {
-          if (snapshot.hasError) {
-            return Center(
-              child: Text(
-                '${snapshot.error}',
-                style: const TextStyle(
-                  fontSize: 20,
-                ),
-              ),
-            );
-          } else if (snapshot.hasData) {
-            var extractedData = snapshot.data as List<Question>;
-            return Scaffold(
-              backgroundColor: Color.fromARGB(255, 4, 76, 135),
-              appBar: AppBar(
-                //title: Text('Câu hỏi'),
-                //centerTitle: true,
-                backgroundColor: Color.fromARGB(255, 4, 76, 135),
-                shadowColor: Colors.transparent,
-                actions: [
-                  Padding(
-                    padding: EdgeInsets.all(18),
-                    child: Text(
-                      'Đúng: $score',
-                      style: TextStyle(fontSize: 18),
-                    ),
-                  )
-                ],
-              ),
-              body: Container(
-                width: double.infinity,
-                padding: EdgeInsets.symmetric(horizontal: 10),
-                child: Column(
-                  children: [
-                    QuestionWidget(
-                        indexAction: index,
-                        question: extractedData[index].title,
-                        totalQuestions: extractedData.length),
-                    const Divider(
-                      color: Colors.white,
-                    ),
-                    const SizedBox(
-                      height: 25,
-                    ),
-                    for (int i = 0;
-                        i < extractedData[index].options.length;
-                        i++)
-                      GestureDetector(
-                        onTap: () => checkAnswerAndUpdate(
-                            extractedData[index].options.values.toList()[i]),
-                        child: OptionCard(
-                          option: extractedData[index].options.keys.toList()[i],
-                          color: isPressed
-                              ? extractedData[index]
-                                          .options
-                                          .values
-                                          .toList()[i] ==
-                                      true
-                                  ? Colors.green
-                                  : Colors.red
-                              : Colors.white,
-                        ),
-                      ),
-                  ],
-                ),
-              ),
-              floatingActionButton: GestureDetector(
-                onTap: () => nextQuestion(extractedData.length),
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 10),
-                  child: NextQuestion(),
-                ),
-              ),
-              floatingActionButtonLocation:
-                  FloatingActionButtonLocation.centerFloat,
-            );
-          }
-        } else {
-          return Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                const CircularProgressIndicator(),
-                const SizedBox(
-                  height: 20,
-                ),
-                Text(
-                  'Vui Lòng Đợi 1 xíu !!',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Theme.of(context).primaryColor,
-                    decoration: TextDecoration.none,
-                  ),
-                ),
-              ],
-            ),
-          );
-        }
-        return const Center(
-          child: Text('Không có dữ liệu!!'),
-        );
-      },
-    ); */
   }
 }

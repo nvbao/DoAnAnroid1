@@ -5,20 +5,21 @@ import 'package:flutter_doan_demo1/nextquestion.dart';
 import 'package:flutter_doan_demo1/option_card.dart';
 import 'package:flutter_doan_demo1/question_model.dart';
 import 'package:flutter_doan_demo1/question_widget.dart';
+import 'package:flutter_doan_demo1/quyentrogiup.dart';
 import 'package:flutter_doan_demo1/result_screen.dart';
 
-class QuestionLyScreen extends StatefulWidget {
-  const QuestionLyScreen({
+class QuestionDiaScreen extends StatefulWidget {
+  const QuestionDiaScreen({
     Key? key,
   }) : super(key: key);
 
   @override
   State<StatefulWidget> createState() {
-    return _QuestionLyScreen();
+    return _QuestionDiaScreen();
   }
 }
 
-class _QuestionLyScreen extends State<QuestionLyScreen> {
+class _QuestionDiaScreen extends State<QuestionDiaScreen> {
   // var db = DBconnect();
 
   /* late Future _question; */
@@ -107,111 +108,120 @@ class _QuestionLyScreen extends State<QuestionLyScreen> {
     Question(
       id: '1',
       title:
-          'Dụng cụ để xác định sự nhanh chậm của chuyển động của một vật gọi là',
+          'Thành phần tự nhiên bị biến đổi mạnh do hoạt động canh tác, xây dựng các công trình thủy lợi của con người là?',
       options: {
-        'vôn kế': false,
-        'nhiệt kế': false,
-        'tốc kế': true,
-        'ampe kế': false
+        'A. Khí hậu': false,
+        'B. Nguồn nước': false,
+        'C. Địa hình': true,
+        'D. Sinh vật': false
       },
+      answer: 'C',
     ),
     Question(
       id: '2',
       title:
-          'Độ lớn của vận tốc có thể cung cấp cho ta thông tin gì về chuyển động của vật?',
+          'Hoạt động sản xuất công nghiệp diễn ra mạnh mẽ nhất ở khu vực nào sau đây?',
       options: {
-        'Cho biết hướng chuyển động của vật': false,
-        'Cho biết vật chuyển động theo quỹ đạo nào': false,
-        'Cho biết vật chuyển động nhanh hay chậm': true,
-        'Cho biết nguyên nhân vì sao vật lại chuyển động được': false
+        'A. Đông Nam Á': false,
+        'B. Bắc Phi': false,
+        'C. Bắc Mĩ': true,
+        'D. Trung Á': false
       },
+      answer: 'C',
     ),
     Question(
       id: '3',
       title:
-          'Chuyển động của phân tử hiđro ở 0°C có vận tốc 1692 m/s, của vệ tinh nhân tạo của Trái Đất có vận tốc 28800 km/h. Hỏi chuyển động nào nhanh hơn?',
+          'Hoạt động nào sau đây làm gia tăng diện tích đất hoang hóa ở vùng đồi núi?',
       options: {
-        'Chuyển động của phân tử hiđro nhanh hơn': false,
-        'Chuyển động của vệ tinh nhân tạo của Trái Đất nhanh hơn': true,
-        'Hai chuyển động bằng nhau': false,
-        'Tất cả đều sai': false
+        'A. Cày sâu bừa kĩ': false,
+        'B. Cải tạo đất phèn, đất mặn': false,
+        'C. Chặt phá rừng bừa bãi': true,
+        'D. Làm ruộng bậc thang': false
       },
+      answer: 'C',
     ),
     Question(
       id: '4',
-      title: 'Đơn vị của vận tốc phụ thuộc vào:',
+      title:
+          'Biện pháp nào sau đây không có vai trò trong hạn chế tình trạng ngập lụt và hạn hán trong sản xuất nông nghiệp ở vùng đồng bằng?',
       options: {
-        'đơn vị chiều dài': false,
-        'đơn vị thời gian': false,
-        'đơn vị chiều dài và đơn vị thời gian': true,
-        'các yếu tố khác': false
+        'A. Xây dựng hồ chứa nước': false,
+        'B. Xây dựng hệ thống đê điều': false,
+        'C. Làm ruộng bậc thang': false,
+        'D. Đào kênh dẫn nước': true
       },
+      answer: 'D',
     ),
     Question(
       id: '5',
-      title:
-          'Trái Đất quay quanh Mặt Trời một vòng trong thời gian một năm (trung bình là 365 ngày). Biết vận tốc quay của Trái Đất bằng 108000 km/h. Lấy π ≈ 3,14 thì giá trị trung bình bán kính quỹ đạo của Trái Đất quanh Mặt Trời là:',
+      title: 'Hoạt động nào sau đây góp phần nâng cao độ phì của đất?',
       options: {
-        '145 000 000 km': false,
-        '150 000 000 km': false,
-        '150 649 682 km': true,
-        '149 300 000 km': false
+        'A. Bón phân cải tạo đất': true,
+        'B. Sử dụng thuốc trừ sâu': false,
+        'C. Khai thác khoáng sản': false,
+        'D. Khai thác rừng': false
       },
+      answer: 'A',
     ),
     Question(
       id: '6',
       title:
-          'Trong đêm tối từ lúc thấy tia chớp lóe sáng đến khi nghe thấy tiếng bom nổ khoảng 15 giây. Hỏi chỗ bom nổ cách người quan sát bao xa? Biết vận tốc truyền âm trong không khí bằng 340 m/s.',
+          'Việc xây dựng các công trình thủy điện có tác động lớn nhất đến thành phần tự nhiên nào sau đây?',
       options: {
-        '5100 m': true,
-        '5000 m': false,
-        '5200 m': false,
-        '5300 m': false
+        'A. Bầu không khí': false,
+        'B. Động, thực vật': false,
+        'C. Dòng chảy sông ngòi': true,
+        'D. Đất đai': false
       },
+      answer: 'C',
     ),
     Question(
       id: '7',
       title:
-          'Một máy bay bay với vận tốc 800 km/h từ Hà Nội đến Thành phố Hồ Chí Minh. Nếu đường bay Hà Nội – Hồ Chí Minh dài 1400 km thì máy bay phải bay trong bao nhiêu lâu?',
+          'Các hoạt động sản xuất của con người ngày nay không có đặc điểm nào?',
       options: {
-        '1 giờ 20 phút': false,
-        '1 giờ 30 phút': false,
-        '1 giờ 45 phút': true,
-        '2 giờ': false
+        'A. Ngày càng đa dạng hơn': false,
+        'B. Tác động ngày càng nhiều đến tự nhiên': false,
+        'C. Không gây ảnh hưởng xấu đến tự nhiên': true,
+        'D. Thay đổi tùy theo các môi trường địa lí': false
       },
+      answer: 'C',
     ),
     Question(
       id: '8',
       title:
-          'Trong các công thức biểu diễn mối quan hệ giữa S, v, t sau đây công thức nào đúng?',
+          'Hoạt động nông nghiệp phổ biến ở những quốc gia có khí hậu ôn đới là?',
       options: {
-        'S = v/t': false,
-        't = v/S': false,
-        't = S/v': true,
-        'S = t/v': false
+        'A. Trồng lúa mì, chăn nuôi cừu': true,
+        'B. Trồng lúa gạo, chăn nuôi trâu bò': false,
+        'C. Trồng cây công nghiệp, chăn nuôi trâu bò': false,
+        'D. Trồng lúa gạo và lúa mì': false
       },
+      answer: 'A',
     ),
     Question(
       id: '9',
-      title: 'Độ dịch chuyển là',
+      title:
+          'Hoạt động nông nghiệp ở các nước phát triển thường có đặc điểm là',
       options: {
-        'độ dài quãng đường vật di chuyển': false,
-        'khoảng cách mà vật di chuyển theo một hướng xác định': true,
-        'khoảng cách giữa vị trí xuất phát và vị trí kết thúc quá trình di chuyển':
-            false,
-        'tỉ số giữa quãng đường và thời gian di chuyển': false
+        'A. Sử dụng công cụ thô sơ': false,
+        'B. Sử dụng máy móc hiện đại': true,
+        'C. Sản xuất trên quy mô nhỏ': false,
+        'D. Sản xuất để tự cung cấp nông sản': false
       },
+      answer: 'B',
     ),
     Question(
       id: '10',
-      title:
-          'Một bạn học sinh đạp xe từ nhà đến trường hết thời gian 30 phút. Biết quãng đường từ nhà đến trường dài 3 km thì tốc độ trung bình của bạn là bao nhiêu?',
+      title: 'Xu thế phát triển của ngành nông nghiệp hiện nay là?',
       options: {
-        '90 km/h': false,
-        '0,1 km/h': false,
-        '10 km/h': false,
-        '6 km/h': true
+        'A. Sản xuất ít các sản phẩm nông sản': false,
+        'B. Sử dụng ngày càng nhiều máy móc và phân bón': true,
+        'C. Sản xuất tự cung tự cấp nông sản': false,
+        'D. Sản xuất không gây ảnh hưởng đến tự nhiên': false
       },
+      answer: 'B',
     ),
   ];
 
@@ -227,7 +237,6 @@ class _QuestionLyScreen extends State<QuestionLyScreen> {
         actions: [
           Row(
             children: [
-              // OtpTimer(),
               Container(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -252,7 +261,8 @@ class _QuestionLyScreen extends State<QuestionLyScreen> {
                                               builder: (context) {
                                                 return AlertDialog(
                                                   title: Text('Mua đáp án'),
-                                                  content: Text('Đáp án lả: '),
+                                                  content: Text(
+                                                      'Đáp án là: ${_questions[index].answer} '),
                                                   actions: [
                                                     TextButton(
                                                       onPressed: () {

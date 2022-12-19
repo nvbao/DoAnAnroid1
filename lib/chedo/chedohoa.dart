@@ -1,22 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_doan_demo1/leveldauthuong_screen.dart';
-import 'package:flutter_doan_demo1/levelxephang_screen.dart';
+import 'package:flutter_doan_demo1/cauhoide/home_quizhoa.dart';
+import 'package:flutter_doan_demo1/cauhoikho/home_quizhoakho.dart';
+import 'package:flutter_doan_demo1/cauhoitrungbinh/home_quizhoatb.dart';
 
-class ModeGiaoDucScreen extends StatefulWidget {
+class CheDoHoa extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return ModeGiaoDucScreenState();
+    return CheDoHoaState();
   }
 }
 
-class ModeGiaoDucScreenState extends State<ModeGiaoDucScreen> {
+class CheDoHoaState extends State<CheDoHoa> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true, //chữ căn giữa
         title: const Text(
-          'Giáo dục',
+          'Hóa học',
           style: TextStyle(color: Color.fromRGBO(205, 190, 145, 1)),
         ),
         backgroundColor: Color.fromRGBO(30, 35, 40, 1),
@@ -32,7 +33,8 @@ class ModeGiaoDucScreenState extends State<ModeGiaoDucScreen> {
         child: Column(
           children: [
             Container(
-              margin: const EdgeInsets.only(top: 190),
+              width: double.infinity,
+              margin: const EdgeInsets.only(top: 150),
               //  alignment: Alignment.bottomCenter,
               child: Column(
                 // mainAxisAlignment: MainAxisAlignment.center,
@@ -45,7 +47,7 @@ class ModeGiaoDucScreenState extends State<ModeGiaoDucScreen> {
                       width: 150,
                       child: TextButton(
                         child: Text(
-                          'Đấu thường',
+                          'Dễ',
                           style: TextStyle(
                             color: Color.fromRGBO(205, 190, 145, 1),
                             fontSize: 25,
@@ -58,8 +60,7 @@ class ModeGiaoDucScreenState extends State<ModeGiaoDucScreen> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) =>
-                                      LevelDauThuongScreen()));
+                                  builder: (context) => QuestionHoaScreen()));
                         },
                       ),
                     ),
@@ -71,7 +72,7 @@ class ModeGiaoDucScreenState extends State<ModeGiaoDucScreen> {
                       width: 150,
                       child: TextButton(
                         child: Text(
-                          'Xếp hạng',
+                          'Trung Bình',
                           style: TextStyle(
                             color: Color.fromRGBO(205, 190, 145, 1),
                             fontSize: 25,
@@ -84,17 +85,38 @@ class ModeGiaoDucScreenState extends State<ModeGiaoDucScreen> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => LevelXepHangScreen()));
+                                  builder: (context) => QuestionHoaTB()));
+                        },
+                      ),
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(25),
+                    child: SizedBox(
+                      height: 100,
+                      width: 150,
+                      child: TextButton(
+                        child: Text(
+                          'Khó',
+                          style: TextStyle(
+                            color: Color.fromRGBO(205, 190, 145, 1),
+                            fontSize: 25,
+                          ),
+                        ),
+                        style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all(
+                                Color.fromRGBO(30, 35, 40, 1))),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => QuestionHoaKho()));
                         },
                       ),
                     ),
                   ),
                 ],
               ),
-            ),
-            //Container chứa hồ sơ, trang chủ ,đấu
-            Container(
-              padding: EdgeInsets.only(top: 170),
             ),
           ],
         ),

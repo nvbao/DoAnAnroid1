@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-//import 'package:flutter_doan_demo1/db_connect.dart';
 import 'package:flutter_doan_demo1/dongho.dart';
 import 'package:flutter_doan_demo1/nextquestion.dart';
 import 'package:flutter_doan_demo1/option_card.dart';
@@ -7,18 +6,18 @@ import 'package:flutter_doan_demo1/question_model.dart';
 import 'package:flutter_doan_demo1/question_widget.dart';
 import 'package:flutter_doan_demo1/result_screen.dart';
 
-class QuestionHoaScreen extends StatefulWidget {
-  const QuestionHoaScreen({
+class QuestionAnhScreen extends StatefulWidget {
+  const QuestionAnhScreen({
     Key? key,
   }) : super(key: key);
 
   @override
   State<StatefulWidget> createState() {
-    return _QuestionHoaScreen();
+    return _QuestionAnhScreen();
   }
 }
 
-class _QuestionHoaScreen extends State<QuestionHoaScreen> {
+class _QuestionAnhScreen extends State<QuestionAnhScreen> {
   // var db = DBconnect();
 
   /* late Future _question; */
@@ -106,82 +105,123 @@ class _QuestionHoaScreen extends State<QuestionHoaScreen> {
   List<Question> _questions = [
     Question(
       id: '1',
-      title: 'Tính chất nào sau đây không có ở Hiđro',
+      title: 'How much/ time/ day/ you/ spend/ playing game?',
       options: {
-        'Nặng hơn không khí': true,
-        'Nhẹ nhất trong các chất khí': false,
-        'Không màu': false,
-        'Tan rất ít trong nước': false
+        'A. How much time a day do you spend on playing game?': true,
+        'B. How much time a day do you spend in playing game?': false,
+        'C. How much time a day did you spend in playing game?': false,
+        'D. How much time a day did you spend on playing game?': false
       },
+      answer: 'A',
     ),
     Question(
       id: '2',
-      title: 'Ứng dụng của Hiđro là',
+      title:
+          'Nick/ just/ buy/ a CD/ Vietnamese folk songs/ and he/ think/ he/ enjoy/ listen/ to the melodies',
       options: {
-        'Oxi hóa kim loại': false,
-        'Làm nguyên liệu sản xuất NH3, HCl, chất hữu cơ': true,
-        'Tạo hiệu ứng nhà kính': false,
-        'Tạo mưa axi': false
+        'A. Nick just bought a CD of Vietnamese folk songs and he thinks he’ll enjoy listening to the melodies':
+            false,
+        'B. Nick has just bought a CD of Vietnamese folk songs and he thinks he’ll enjoy listening to the melodies':
+            true,
+        'C. Nick did just buy a CD of Vietnamese folk songs and he thinks he’ll enjoy listening to the melodies':
+            false,
+        'D. Nick just buys a CD of Vietnamese folk songs and he thinks he’ll enjoy listening to the melodies':
+            false
       },
+      answer: 'B',
     ),
     Question(
       id: '3',
-      title: 'Trong các khí sau: H2,N2,O2,CO2, khí nhẹ nhất là',
-      options: {'H2': true, 'N2': false, 'O2': false, 'CO2': false},
+      title: 'Ping/ not/ mind/ do/ a lot of/ homework/ in the evenings',
+      options: {
+        'A. Ping doesn’t mind to do a lot of homework in the evenings': false,
+        'B. Ping didn’t mind to do a lot of homework in the evenings': false,
+        'C. Ping didn’t mind doing a lot of homework in the evenings': false,
+        'D. Ping doesn’t mind doing a lot of homework in the evenings': true
+      },
+      answer: 'D',
     ),
     Question(
       id: '4',
-      title: 'Công thức hóa học của khí hiđro là:',
-      options: {'H2O': false, 'H': false, 'H2': true, 'H3': false},
+      title:
+          'Marie/ like/ window shopping/ her close friend/ Saturday evenings',
+      options: {
+        'A. Marie likes window shopping with her close friend in Saturday evenings.':
+            false,
+        'B. Marie like window shopping with her close friend in Saturday evenings.':
+            false,
+        'C. Marie likes window shopping with her close friend on Saturday evenings.':
+            true,
+        'D. Marie like window shopping with her close friend on Saturday evenings.':
+            false
+      },
+      answer: 'C',
     ),
     Question(
       id: '5',
-      title:
-          'Cho 8g CuO tác dụng hết với H2 ở nhiệt độ cao. Sau phản ứng thấy có m (g) chất rắn. Xác định công thức hóa học của chất rắn sau phản ứng và tính m.',
+      title: 'Why/ not/ we/ help/ our parents/ some DIY projects?',
       options: {
-        'Cu, m = 0,64g': false,
-        'Cu, m = 6,4g': true,
-        'CuO dư, m = 4g': false,
-        'Không xác định được': false
+        'A. Why not we help our parents with some DIY projects?': false,
+        'B. Why not we help our parents some DIY projects?': false,
+        'C. Why don’t we help our parents some DIY projects?': false,
+        'D. Why don’t we help our parents with some DIY projects?': true
       },
+      answer: 'D',
     ),
     Question(
       id: '6',
-      title:
-          'Trong những oxit sau: CuO, MgO, Fe2O3, CaO, Na2O oxit nào không bị hiđro khử:',
+      title: 'look/ does/ she/ what/ like?',
       options: {
-        'CuO, MgO': false,
-        'Fe2O3, Na2O': false,
-        'Fe2O3, CaO': false,
-        'CaO, Na2O, MgO': true
+        'A. What like she look does?': false,
+        'B. What does she look like?': true,
+        'C. What does like she look?': false,
+        'D. What she look does like?': false
       },
+      answer: 'B',
     ),
     Question(
       id: '7',
-      title: 'Tỉ lệ mol của Hidro và Oxi sẽ gây nổ mạnh là:',
-      options: {'2:1': true, '1:3': false, '1:1': false, '1:2': false},
+      title: 'a/ received/ Lan/ letter/ yesterday/ her/ from/ friend.',
+      options: {
+        'A. Lan a letter received her friend from yesterday.': false,
+        'B. Lan her friend received a letter from yesterday.': false,
+        'C. Lan received a her friend letter from yesterday.': false,
+        'D. Lan received a letter from her friend yesterday.': true
+      },
+      answer: 'D',
     ),
     Question(
       id: '8',
-      title:
-          'Trong những oxit sau: CuO,MgO, Al2O3, FeO, Na2O, PbO. Có bao nhiêu oxit phản ứng với hidro ở nhiệt độ cao?',
-      options: {'4': false, '5': false, '3': true, '1': false},
+      title: 'is/ My/ gardening/ activity/ favourite/ leisure.',
+      options: {
+        'A. My favourite leisure activity is gardening.': true,
+        'B. My leisure activity favourite is gardening.': false,
+        'C. My gardening is favourite leisure activity.': false,
+        'D. My activity is favourite leisure gardening.': false
+      },
+      answer: 'A',
     ),
     Question(
       id: '9',
-      title: 'Sau phản ứng của CuO và H2 thì có hiện tượng gì:',
+      title: 'not/ get/ is/ She/ to/ old/ married/ enough.',
       options: {
-        'Sau phản ứng, chất rắn màu đen chuyển thành xanh lam': false,
-        'Sau phản ứng, chất rắn màu đen chuyển thành đỏ': true,
-        'Có chất khí bay lên': false,
-        'Không có hiện tượng': false
+        'A. She is not old to get enough married.': false,
+        'B. She is not get married old enough to.': false,
+        'C. She is not old enough to get married.': true,
+        'D. She is not enough old to get married.': false
       },
+      answer: 'C',
     ),
     Question(
       id: '10',
-      title:
-          'Dẫn lượng dư H2 qua chì (II) oxit nung nóng thu được sản phẩm rắn là',
-      options: {'Pb': true, 'H2': false, 'PbO': false, 'Không phản ứng': false},
+      title: 'long/ is/ a/ girl/ She/ with/ nice/ hair.',
+      options: {
+        'A. She is a nice girl with long hair.': true,
+        'B. She is a long hair girl with nice.': false,
+        'C. She is with a nice girl long hair.': false,
+        'D. She is with a long hair girl nice.': false
+      },
+      answer: 'A',
     ),
   ];
 
@@ -222,7 +262,8 @@ class _QuestionHoaScreen extends State<QuestionHoaScreen> {
                                               builder: (context) {
                                                 return AlertDialog(
                                                   title: Text('Mua đáp án'),
-                                                  content: Text('Đáp án lả: '),
+                                                  content: Text(
+                                                      'Đáp án là: ${_questions[index].answer} '),
                                                   actions: [
                                                     TextButton(
                                                       onPressed: () {

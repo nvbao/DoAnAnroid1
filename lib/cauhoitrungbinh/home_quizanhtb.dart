@@ -7,18 +7,18 @@ import 'package:flutter_doan_demo1/question_model.dart';
 import 'package:flutter_doan_demo1/question_widget.dart';
 import 'package:flutter_doan_demo1/result_screen.dart';
 
-class QuestionToanScreen extends StatefulWidget {
-  const QuestionToanScreen({
+class QuestionAnhTB extends StatefulWidget {
+  const QuestionAnhTB({
     Key? key,
   }) : super(key: key);
 
   @override
   State<StatefulWidget> createState() {
-    return _QuestionToanScreen();
+    return _QuestionAnhTB();
   }
 }
 
-class _QuestionToanScreen extends State<QuestionToanScreen> {
+class _QuestionAnhTB extends State<QuestionAnhTB> {
   // var db = DBconnect();
 
   /* late Future _question; */
@@ -34,8 +34,8 @@ class _QuestionToanScreen extends State<QuestionToanScreen> {
   }
  */
   int index = 0;
-  int score = 0;
-  int diem = 0;
+  int score = 0; //câu đúng
+  int diem = 0; // điểm
   bool isPressed = false;
   bool isAlreadySelected = false;
 
@@ -106,55 +106,107 @@ class _QuestionToanScreen extends State<QuestionToanScreen> {
   List<Question> _questions = [
     Question(
       id: '1',
-      title: 'Kết quả 2 + 2 = ?',
-      options: {'5': false, '10': false, '4': true, '8': false},
+      title: 'Vietnam is trying __________ traditional Quan Ho singing.',
+      options: {
+        'A. preserve': false,
+        'B. to preserve': true,
+        'C. preserving': false,
+        'D. preserved': false
+      },
+      answer: 'B',
     ),
     Question(
       id: '2',
-      title: 'Kết quả 2 x 5 = ?',
-      options: {'5': false, '10': true, '4': false, '8': false},
+      title: 'Nick wants to take part __________ the dragon boat race.',
+      options: {'A. on': false, 'B. at': false, 'C. of': false, 'D. in': true},
+      answer: 'D',
     ),
     Question(
       id: '3',
-      title: 'Kết quả 5 - 5 = ?',
-      options: {'3': false, '2': false, '1': false, '0': true},
+      title: 'Have you ever participated __________ a carnival?',
+      options: {
+        'A. to': false,
+        'B. with': false,
+        'C. in': true,
+        'D. for': false
+      },
+      answer: 'C',
     ),
     Question(
       id: '4',
-      title: 'Kết quả 5 / 5 = ?',
-      options: {'1': true, '2.0': false, '0.2': false, '0.1': false},
+      title: 'Do you know how many festivals __________ in Vietnam?',
+      options: {
+        'A. are there': true,
+        'B. is there': false,
+        'C. were there': false,
+        'D. was there': false
+      },
+      answer: 'A',
     ),
     Question(
       id: '5',
-      title: 'Kết quả (2 + 2) x 0 = ?',
-      options: {'5': false, '10': false, '0': true, '8': false},
+      title:
+          'The most exciting part of Lim festival __________ Quan Ho singing.',
+      options: {
+        'A. are': false,
+        'B. is': true,
+        'C. was': false,
+        'D. were': false
+      },
+      answer: 'B',
     ),
     Question(
       id: '6',
-      title: 'Kết quả 2 x 5 / 1  = ?',
-      options: {'5': false, '10': true, '4': false, '8': false},
+      title:
+          'If you go to Da Lat, you should try some __________ of people here.',
+      options: {
+        'A. customs': false,
+        'B. shawls': false,
+        'C. specialties': true,
+        'D. costumes': false
+      },
+      answer: 'C',
     ),
     Question(
       id: '7',
-      title: 'Kết quả 5 - 5 x 5 = ?',
-      options: {'-30': false, '-2': false, '-10': false, '-20': true},
+      title:
+          'People living in __________ Sahara have to fight for their living.',
+      options: {'A. a': false, 'B. an': false, 'C. the': true, 'D. x': false},
+      answer: 'C',
     ),
     Question(
       id: '8',
-      title: 'Kết quả 5 / 5 + 2 = ?',
-      options: {'3': true, '2.0': false, '0.2': false, '0.3': false},
+      title:
+          '_______ traditional costume is the most colorful among all peoples of Vietnam?',
+      options: {
+        'A. What': false,
+        'B. Whose': true,
+        'C. When': false,
+        'D. Where': false
+      },
+      answer: 'B',
     ),
     Question(
       id: '9',
-      title: 'Kết quả 2 - 2 x 0= ?',
-      options: {'6': false, '4': false, '2': true, '8': false},
+      title:
+          'People __________ mountainous regions have to travel a long way to town.',
+      options: {'A. on': false, 'B. in': true, 'C. at': false, 'D. of': false},
+      answer: 'B',
     ),
     Question(
       id: '10',
-      title: 'Kết quả (2 x 5) + (5 x 2) = ?',
-      options: {'10': false, '20': true, '30': false, '40': false},
+      title:
+          'Vietnam is a multicultural country. The Vietnamese peoples are __________ but live peacefully.',
+      options: {
+        'A. basic': false,
+        'B. boarding': false,
+        'C. diverse': true,
+        'D. communal': false
+      },
+      answer: 'C',
     ),
   ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -167,7 +219,7 @@ class _QuestionToanScreen extends State<QuestionToanScreen> {
         actions: [
           Row(
             children: [
-              // OtpTimer(),
+              //quyền trợ giúp
               Container(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -192,7 +244,8 @@ class _QuestionToanScreen extends State<QuestionToanScreen> {
                                               builder: (context) {
                                                 return AlertDialog(
                                                   title: Text('Mua đáp án'),
-                                                  content: Text('Đáp án lả: '),
+                                                  content: Text(
+                                                      'Đáp án là: ${_questions[index].answer} '),
                                                   actions: [
                                                     TextButton(
                                                       onPressed: () {
@@ -330,113 +383,5 @@ class _QuestionToanScreen extends State<QuestionToanScreen> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
-    /* return FutureBuilder(
-      future: _question as Future<List<Question>>,
-      builder: (ctx, snapshot) {
-        if (snapshot.connectionState == ConnectionState.done) {
-          if (snapshot.hasError) {
-            return Center(
-              child: Text(
-                '${snapshot.error}',
-                style: const TextStyle(
-                  fontSize: 20,
-                ),
-              ),
-            );
-          } else if (snapshot.hasData) {
-            var extractedData = snapshot.data as List<Question>;
-            return Scaffold(
-              backgroundColor: Color.fromARGB(255, 4, 76, 135),
-              appBar: AppBar(
-                //title: Text('Câu hỏi'),
-                //centerTitle: true,
-                backgroundColor: Color.fromARGB(255, 4, 76, 135),
-                shadowColor: Colors.transparent,
-                actions: [
-                  Padding(
-                    padding: EdgeInsets.all(18),
-                    child: Text(
-                      'Đúng: $score',
-                      style: TextStyle(fontSize: 18),
-                    ),
-                  )
-                ],
-              ),
-              body: Container(
-                width: double.infinity,
-                padding: EdgeInsets.symmetric(horizontal: 10),
-                child: Column(
-                  children: [
-                    QuestionWidget(
-                        indexAction: index,
-                        question: extractedData[index].title,
-                        totalQuestions: extractedData.length),
-                    const Divider(
-                      color: Colors.white,
-                    ),
-                    const SizedBox(
-                      height: 25,
-                    ),
-                    for (int i = 0;
-                        i < extractedData[index].options.length;
-                        i++)
-                      GestureDetector(
-                        onTap: () => checkAnswerAndUpdate(
-                            extractedData[index].options.values.toList()[i]),
-                        child: OptionCard(
-                          option: extractedData[index].options.keys.toList()[i],
-                          color: isPressed
-                              ? extractedData[index]
-                                          .options
-                                          .values
-                                          .toList()[i] ==
-                                      true
-                                  ? Colors.green
-                                  : Colors.red
-                              : Colors.white,
-                        ),
-                      ),
-                  ],
-                ),
-              ),
-              floatingActionButton: GestureDetector(
-                onTap: () => nextQuestion(extractedData.length),
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 10),
-                  child: NextQuestion(),
-                ),
-              ),
-              floatingActionButtonLocation:
-                  FloatingActionButtonLocation.centerFloat,
-            );
-          }
-        } else {
-          return Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                const CircularProgressIndicator(),
-                const SizedBox(
-                  height: 20,
-                ),
-                Text(
-                  'Vui Lòng Đợi 1 xíu !!',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Theme.of(context).primaryColor,
-                    decoration: TextDecoration.none,
-                  ),
-                ),
-              ],
-            ),
-          );
-        }
-        return const Center(
-          child: Text('Không có dữ liệu!!'),
-        );
-      },
-    ); */
   }
 }

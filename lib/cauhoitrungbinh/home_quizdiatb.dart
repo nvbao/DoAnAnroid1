@@ -7,18 +7,18 @@ import 'package:flutter_doan_demo1/question_model.dart';
 import 'package:flutter_doan_demo1/question_widget.dart';
 import 'package:flutter_doan_demo1/result_screen.dart';
 
-class QuestionAnhScreen extends StatefulWidget {
-  const QuestionAnhScreen({
+class QuestionDiaTB extends StatefulWidget {
+  const QuestionDiaTB({
     Key? key,
   }) : super(key: key);
 
   @override
   State<StatefulWidget> createState() {
-    return _QuestionAnhScreen();
+    return _QuestionDiaTB();
   }
 }
 
-class _QuestionAnhScreen extends State<QuestionAnhScreen> {
+class _QuestionDiaTB extends State<QuestionDiaTB> {
   // var db = DBconnect();
 
   /* late Future _question; */
@@ -106,113 +106,122 @@ class _QuestionAnhScreen extends State<QuestionAnhScreen> {
   List<Question> _questions = [
     Question(
       id: '1',
-      title: 'How much/ time/ day/ you/ spend/ playing game?',
+      title: 'Môi trường sống của con người bao gồm?',
       options: {
-        'How much time a day do you spend on playing game?': true,
-        'How much time a day do you spend in playing game?': false,
-        'How much time a day did you spend in playing game?': false,
-        'How much time a day did you spend on playing game?': false
+        'A. Môi trường không khí, môi trường nước và môi trường đất': false,
+        'B. Môi trường tự nhiên, môi trường nhân tạo và môi trường xã hội':
+            true,
+        'C. Môi trường tự nhiên, môi trường nước và môi trường đất': false,
+        'D. Môi trường nhận tạo, môi trường nước và môi trường không khí': false
       },
+      answer: 'B',
     ),
     Question(
       id: '2',
-      title:
-          'Nick/ just/ buy/ a CD/ Vietnamese folk songs/ and he/ think/ he/ enjoy/ listen/ to the melodies',
+      title: 'Chức năng nào dưới đây không phải của môi trường địa lí?',
       options: {
-        'Nick just bought a CD of Vietnamese folk songs and he thinks he’ll enjoy listening to the melodies':
-            false,
-        'Nick has just bought a CD of Vietnamese folk songs and he thinks he’ll enjoy listening to the melodies':
-            true,
-        'Nick did just buy a CD of Vietnamese folk songs and he thinks he’ll enjoy listening to the melodies':
-            false,
-        'Nick just buys a CD of Vietnamese folk songs and he thinks he’ll enjoy listening to the melodies':
-            false
+        'A. Là nơi chứa đựng cái phế thả do con người tạo ra': false,
+        'B. Là nguồn cung cấp tài nguyên thiên nhiên': false,
+        'C. Là không gian sinh sống của con người': false,
+        'D. Là nơi tồn tại các quy luật tự nhiên': true
       },
+      answer: 'D',
     ),
     Question(
       id: '3',
-      title: 'Ping/ not/ mind/ do/ a lot of/ homework/ in the evenings',
+      title:
+          'Vai trò quyết định sự phát triển của xã hội loài người thuộc về yếu tố',
       options: {
-        'Ping doesn’t mind to do a lot of homework in the evenings': false,
-        'Ping didn’t mind to do a lot of homework in the evenings': false,
-        'Ping didn’t mind doing a lot of homework in the evenings': false,
-        'Ping doesn’t mind doing a lot of homework in the evenings': true
+        'A. Môi trường tự nhiên': false,
+        'B. Môi trường nhân tạo và môi trường xã hội': false,
+        'C. Phương thức sản xuất, gồm cả sức sản xuất và quan hệ sản xuất':
+            true,
+        'D. Môi trường tự nhiên và môi trường xã hội': false
       },
+      answer: 'C',
     ),
     Question(
       id: '4',
-      title:
-          'Marie/ like/ window shopping/ her close friend/ Saturday evenings',
+      title: 'Phải bảo vệ môi trường vì',
       options: {
-        'Marie likes window shopping with her close friend in Saturday evenings.':
-            false,
-        'Marie like window shopping with her close friend in Saturday evenings.':
-            false,
-        'Marie likes window shopping with her close friend on Saturday evenings.':
+        'A. Môi trường có quan hệ trực tiếp đến sự tồn tại và phát triển của xã hội con người':
             true,
-        'Marie like window shopping with her close friend on Saturday evenings.':
-            false
+        'B. Môi trường có quan hệ trực tiếp đến sự tồn tại và phát triển của xã hội loài vật':
+            false,
+        'C. Môi trường có quan hệ trực tiếp đến sự tồn tại và phát triển của xã hội thực vật':
+            false,
+        'D. Tất cả các ý trên': false
       },
+      answer: 'A',
     ),
     Question(
       id: '5',
-      title: 'Why/ not/ we/ help/ our parents/ some DIY projects?',
+      title: 'Trong ngành chăn nuôi, vật nuôi chính là',
       options: {
-        'Why not we help our parents with some DIY projects?': false,
-        'Why not we help our parents some DIY projects?': false,
-        'Why don’t we help our parents some DIY projects?': false,
-        'Why don’t we help our parents with some DIY projects?': true
+        'A. Heo': false,
+        'B. Bò': true,
+        'C. Gà': false,
+        'D. Cừu': false
       },
+      answer: 'B',
     ),
     Question(
       id: '6',
-      title: 'look/ does/ she/ what/ like?',
+      title: 'Ngành nuôi trồng thủy sản đang phát triển theo hướng',
       options: {
-        'What like she look does?': false,
-        'What does she look like?': true,
-        'What does like she look?': false,
-        'What she look does like?': false
+        'A. Nuôi quãng canh để đỡ chi phí thức ăn': false,
+        'B. Nuôi công nghiệp đại tà': false,
+        'C. Nuôi đặc sản và thực phẩm cao cấp có giá trị kinh tế cao': true,
+        'D. Nuôi thâm canh đỡ chi phí ban đầu': false
       },
+      answer: 'C',
     ),
     Question(
       id: '7',
-      title: 'a/ received/ Lan/ letter/ yesterday/ her/ from/ friend.',
+      title: 'Điểm giống nhau về vai trò của ngành thủy sản và chăn nuôi là',
       options: {
-        'Lan a letter received her friend from yesterday.': false,
-        'Lan her friend received a letter from yesterday.': false,
-        'Lan received a her friend letter from yesterday.': false,
-        'Lan received a letter from her friend yesterday.': true
+        'A. Cung cấp nguồn thực phẩm giàu dinh dưỡng cho con người': true,
+        'B. Cung cấp sức kéo cho nông nghiệp': false,
+        'C. Là nguồn phân bón cho trồng trọt': false,
+        'D. Không sử dụng làm nguyên liệu cho công nghiệp chế biến': false
       },
+      answer: 'A',
     ),
     Question(
       id: '8',
-      title: 'is/ My/ gardening/ activity/ favourite/ leisure.',
+      title:
+          'Hình thức chăn nuôi nào sau đây là biểu hiện của nền nông nghiệp hiện đại?',
       options: {
-        'My favourite leisure activity is gardening.': true,
-        'My leisure activity favourite is gardening.': false,
-        'My gardening is favourite leisure activity.': false,
-        'My activity is favourite leisure gardening.': false
+        'A. Chăn nuôi thủ công': false,
+        'B. Chăn nuôi công nghiệp': true,
+        'C. Chăn nuôi tự nhiên': false,
+        'D. Chăn nuôi chuồng trại': false
       },
+      answer: 'B',
     ),
     Question(
       id: '9',
-      title: 'not/ get/ is/ She/ to/ old/ married/ enough.',
+      title:
+          'Cơ sở thức ăn cho chăn nuôi đã có những tiến bộ vượt bậc là nhờ vào',
       options: {
-        'She is not old to get enough married.': false,
-        'She is not get married old enough to.': false,
-        'She is not old enough to get married.': true,
-        'She is not enough old to get married.': false
+        'A. Thành tựu khoa học kĩ thuật': true,
+        'B. Kinh nghiệm từ sản xuất của con người': false,
+        'C. Sự thuận lợi của điều kiện tự nhiên': false,
+        'D. Lực lượng lao động dồi dào': false
       },
+      answer: 'A',
     ),
     Question(
       id: '10',
-      title: 'long/ is/ a/ girl/ She/ with/ nice/ hair.',
+      title:
+          'Mọi công dân đủ 18 tuổi trở lên đều được tham gia bầu cử, trừ các trường hợp đặc biệt bị pháp luật cấm là nội dung của nguyên tắc bầu cử nào dưới đây ?',
       options: {
-        'She is a nice girl with long hair.': true,
-        'She is a long hair girl with nice.': false,
-        'She is with a nice girl long hair.': false,
-        'She is with a long hair girl nice.': false
+        'A. Bình đẳng': false,
+        'B. Trực tiếp': false,
+        'C. Phổ thông': true,
+        'D. Bỏ phiếu kín': false
       },
+      answer: 'C',
     ),
   ];
 
@@ -253,7 +262,8 @@ class _QuestionAnhScreen extends State<QuestionAnhScreen> {
                                               builder: (context) {
                                                 return AlertDialog(
                                                   title: Text('Mua đáp án'),
-                                                  content: Text('Đáp án lả: '),
+                                                  content: Text(
+                                                      'Đáp án là: ${_questions[index].answer} '),
                                                   actions: [
                                                     TextButton(
                                                       onPressed: () {
@@ -391,113 +401,5 @@ class _QuestionAnhScreen extends State<QuestionAnhScreen> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
-    /* return FutureBuilder(
-      future: _question as Future<List<Question>>,
-      builder: (ctx, snapshot) {
-        if (snapshot.connectionState == ConnectionState.done) {
-          if (snapshot.hasError) {
-            return Center(
-              child: Text(
-                '${snapshot.error}',
-                style: const TextStyle(
-                  fontSize: 20,
-                ),
-              ),
-            );
-          } else if (snapshot.hasData) {
-            var extractedData = snapshot.data as List<Question>;
-            return Scaffold(
-              backgroundColor: Color.fromARGB(255, 4, 76, 135),
-              appBar: AppBar(
-                //title: Text('Câu hỏi'),
-                //centerTitle: true,
-                backgroundColor: Color.fromARGB(255, 4, 76, 135),
-                shadowColor: Colors.transparent,
-                actions: [
-                  Padding(
-                    padding: EdgeInsets.all(18),
-                    child: Text(
-                      'Đúng: $score',
-                      style: TextStyle(fontSize: 18),
-                    ),
-                  )
-                ],
-              ),
-              body: Container(
-                width: double.infinity,
-                padding: EdgeInsets.symmetric(horizontal: 10),
-                child: Column(
-                  children: [
-                    QuestionWidget(
-                        indexAction: index,
-                        question: extractedData[index].title,
-                        totalQuestions: extractedData.length),
-                    const Divider(
-                      color: Colors.white,
-                    ),
-                    const SizedBox(
-                      height: 25,
-                    ),
-                    for (int i = 0;
-                        i < extractedData[index].options.length;
-                        i++)
-                      GestureDetector(
-                        onTap: () => checkAnswerAndUpdate(
-                            extractedData[index].options.values.toList()[i]),
-                        child: OptionCard(
-                          option: extractedData[index].options.keys.toList()[i],
-                          color: isPressed
-                              ? extractedData[index]
-                                          .options
-                                          .values
-                                          .toList()[i] ==
-                                      true
-                                  ? Colors.green
-                                  : Colors.red
-                              : Colors.white,
-                        ),
-                      ),
-                  ],
-                ),
-              ),
-              floatingActionButton: GestureDetector(
-                onTap: () => nextQuestion(extractedData.length),
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 10),
-                  child: NextQuestion(),
-                ),
-              ),
-              floatingActionButtonLocation:
-                  FloatingActionButtonLocation.centerFloat,
-            );
-          }
-        } else {
-          return Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                const CircularProgressIndicator(),
-                const SizedBox(
-                  height: 20,
-                ),
-                Text(
-                  'Vui Lòng Đợi 1 xíu !!',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Theme.of(context).primaryColor,
-                    decoration: TextDecoration.none,
-                  ),
-                ),
-              ],
-            ),
-          );
-        }
-        return const Center(
-          child: Text('Không có dữ liệu!!'),
-        );
-      },
-    ); */
   }
 }

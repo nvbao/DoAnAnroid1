@@ -7,18 +7,18 @@ import 'package:flutter_doan_demo1/question_model.dart';
 import 'package:flutter_doan_demo1/question_widget.dart';
 import 'package:flutter_doan_demo1/result_screen.dart';
 
-class QuestionSinhScreen extends StatefulWidget {
-  const QuestionSinhScreen({
+class QuestionSuTB extends StatefulWidget {
+  const QuestionSuTB({
     Key? key,
   }) : super(key: key);
 
   @override
   State<StatefulWidget> createState() {
-    return _QuestionSinhScreen();
+    return _QuestionSuTB();
   }
 }
 
-class _QuestionSinhScreen extends State<QuestionSinhScreen> {
+class _QuestionSuTB extends State<QuestionSuTB> {
   // var db = DBconnect();
 
   /* late Future _question; */
@@ -106,107 +106,117 @@ class _QuestionSinhScreen extends State<QuestionSinhScreen> {
   List<Question> _questions = [
     Question(
       id: '1',
-      title: 'Cơ thể người được chia làm mấy phần? Đó là những phần nào?',
+      title: 'Quốc gia cổ được hình thành trên cơ sở Văn hóa Óc Eo là',
       options: {
-        '3 phần: đầu, thân và chân': false,
-        '2 phần: đầu và thân': false,
-        '3 phần: đầu, thân và các chi': true,
-        '3 phần: đầu, cổ và thân': false
+        'A. Chân Lạp': false,
+        'B. Phù Nam': true,
+        'C. Văn Lang': false,
+        'D. Chăm-pa': false
       },
+      answer: 'B',
     ),
     Question(
       id: '2',
-      title:
-          'Khi chúng ta bơi cật lực, hệ cơ quan nào dưới đây sẽ tăng cường độ hoạt động ?',
+      title: 'Hoạt động kinh tế phổ biến của cư dân Phù Nam là',
       options: {
-        'Hệ tuần hoàn': false,
-        'Hệ hô hấp': false,
-        'Hệ vận động': false,
-        'Tất cả các phương án còn lại': true
+        'A. trồng rau nuôi cá': false,
+        'B. đánh bắt cá và khai thác hải sản': false,
+        'C. khai thác rừng ': false,
+        'D. sản xuất nông nghiệp': true
       },
+      answer: 'D',
     ),
     Question(
       id: '3',
-      title: 'Thực quản là bộ phận của hệ cơ quan nào sau đây?',
+      title: 'Vào khoảng cuối thế kỉ VII, vua Lâm Ấp đổi tên nước thành',
       options: {
-        'Hệ hô hấp': false,
-        'Hệ tiêu hóa': true,
-        'Hệ tuần hoàn': false,
-        'Hệ bài tiết': false
+        'A. Tượng Lâm': false,
+        'B. Nhật Nam': false,
+        'C. Chăm-pa': true,
+        'D. Chân Lạp': false
       },
+      answer: 'C',
     ),
     Question(
       id: '4',
-      title:
-          'Khi mất khả năng dung nạp chất dinh dưỡng, cơ thể chúng ta sẽ trở nên kiệt quệ, đồng thời khả năng vận động cũng bị ảnh hưởng nặng nề. Ví dụ trên phản ánh điều gì ?',
+      title: 'Văn hóa ở nước ta dưới thời kì Bắc thuộc có đặc điểm gì nổi bật?',
       options: {
-        'Các hệ cơ quan trong cơ thể có mối liên hệ mật thiết với nhau': true,
-        'Dinh dưỡng là thành phần thiết yếu của cơ và xương': false,
-        'Hệ thần kinh và hệ vận động đã bị hủy hoại hoàn toàn do thiếu dinh dưỡng':
+        'A. Văn hóa Trung Quốc không ảnh hưởng nhiều đến văn hóa nước ta':
             false,
-        'Tất cả các phương án đưa ra': false
+        'B. Văn hóa Trung Quốc ảnh hưởng rất nhiều đến văn hóa nước ta': false,
+        'C. Phát huy bản sắc văn hóa dân tộc': false,
+        'D. Tiếp thu và sáng tạo các yếu tố bên ngoài,giữ gìn những giá trị văn hóa cốt lõi của dân tộc':
+            true
       },
+      answer: 'D',
     ),
     Question(
       id: '5',
-      title: 'Da là nơi đi đến của hệ cơ quan nào dưới đây ?',
+      title: 'Người Hán truyền bá Nho giáo vào nước ta, bắt nhân dân ta phải',
       options: {
-        'Hệ tuần hoàn': false,
-        'Hệ thần kinh': false,
-        'Hệ bài tiết': false,
-        'Tất cả các phương án còn lại': true
+        'A. sùng bái Nho giáo': false,
+        'B. thay đổi theo phong tục người Hán': true,
+        'C. học chữ Nho': false,
+        'D. học theo tục lệ Nho giáo': false
       },
+      answer: 'B',
     ),
     Question(
       id: '6',
-      title: 'Cơ nào dưới đây ngăn cách khoang ngực và khoang bụng',
+      title:
+          'Đâu không phải nét văn hóa của người Việt được giữ gìn và phát triển trong thời kì Bắc thuộc?',
       options: {
-        'Cơ hoành': true,
-        'Cơ ức đòn chũm ': false,
-        'Cơ liên sườn': false,
-        'Cơ nhị đầu': false
+        'A. Tín ngưỡng thờ cúng tổ tiên': false,
+        'B. Tục ăn trầu': false,
+        'C. Tục nhuộm răng đen': false,
+        'D. Tục xin chữ đầu năm': true
       },
+      answer: 'D',
     ),
     Question(
       id: '7',
-      title: 'Thanh quản là một bộ phận của',
+      title:
+          'Ai đã lãnh đạo nhân dân Âu Việt và Lạc Việt kháng chiến chống quân Tần xâm lược?',
       options: {
-        'hệ hô hấp': true,
-        'hệ tiêu hóa': false,
-        'hệ bài tiết': false,
-        'hệ sinh dục': false
+        'A. Hùng Vương': false,
+        'B. Thục Phán': true,
+        'C. Hai Bà Trưng': false,
+        'D. Lê Lợi': false
       },
+      answer: 'B',
     ),
     Question(
       id: '8',
-      title:
-          'Vai trò tiếp nhận và trả lời kích thích của môi trường, điều hòa hoạt động các cơ quan là của hệ cơ quan nào?',
+      title: 'Tổ chức bộ máy Nhà nước Âu Lạc được xây dựng trên cơ sở tổ chức',
       options: {
-        'Hệ vận động': false,
-        'Hệ tuần hoàn': false,
-        'Hệ bài tiết': false,
-        'Hệ thần kinh': true
+        'A. Nhà nước thời Văn Lang': true,
+        'B. Nhà nước thời Nhà Lý': false,
+        'C. Nhà nước Lạc Việt': false,
+        'D. Nhà nước Tây Âu': false
       },
+      answer: 'A',
     ),
     Question(
       id: '9',
-      title: 'Các cơ quan trong hệ hô hấp là:',
+      title: 'Theo tương truyền, nỏ Liên Châu do ai chế tạo?',
       options: {
-        'Phổi và thực quản': false,
-        'Đường dẫn khí và thực quản': false,
-        'Thực quản, đường dẫn khí và phổi': false,
-        'Phổi, đường dẫn khí và thanh quản': true
+        'A. An Dương Vương': false,
+        'B. Cao Lỗ': true,
+        'C. Hùng Vương': false,
+        'D. Liên Châu': false
       },
+      answer: 'B',
     ),
     Question(
       id: '10',
-      title: 'Trao đổi chất của cơ thể và môi trường được thực hiện qua:',
+      title: 'Kinh đô của nước Âu Lạc - Phong Khê, nay là',
       options: {
-        'Hệ hô hấp': false,
-        'Hệ tuần hoàn': false,
-        'Hệ tiêu hóa': false,
-        'Hệ hô hấp, hệ tiêu hóa, hệ bài tiết': true
+        'A. Cố Loa - Đông Anh - Hà Nội': true,
+        'B. Hát Môn - Phúc Thọ - Hà Nội': false,
+        'C. Tiên Phong - Phổ Yên - Thái Nguyên': false,
+        'D. Mai Phụ - Lộc Hà - Hà Tĩnh': false
       },
+      answer: 'A',
     ),
   ];
 
@@ -247,7 +257,8 @@ class _QuestionSinhScreen extends State<QuestionSinhScreen> {
                                               builder: (context) {
                                                 return AlertDialog(
                                                   title: Text('Mua đáp án'),
-                                                  content: Text('Đáp án lả: '),
+                                                  content: Text(
+                                                      'Đáp án là: ${_questions[index].answer} '),
                                                   actions: [
                                                     TextButton(
                                                       onPressed: () {
@@ -385,113 +396,5 @@ class _QuestionSinhScreen extends State<QuestionSinhScreen> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
-    /* return FutureBuilder(
-      future: _question as Future<List<Question>>,
-      builder: (ctx, snapshot) {
-        if (snapshot.connectionState == ConnectionState.done) {
-          if (snapshot.hasError) {
-            return Center(
-              child: Text(
-                '${snapshot.error}',
-                style: const TextStyle(
-                  fontSize: 20,
-                ),
-              ),
-            );
-          } else if (snapshot.hasData) {
-            var extractedData = snapshot.data as List<Question>;
-            return Scaffold(
-              backgroundColor: Color.fromARGB(255, 4, 76, 135),
-              appBar: AppBar(
-                //title: Text('Câu hỏi'),
-                //centerTitle: true,
-                backgroundColor: Color.fromARGB(255, 4, 76, 135),
-                shadowColor: Colors.transparent,
-                actions: [
-                  Padding(
-                    padding: EdgeInsets.all(18),
-                    child: Text(
-                      'Đúng: $score',
-                      style: TextStyle(fontSize: 18),
-                    ),
-                  )
-                ],
-              ),
-              body: Container(
-                width: double.infinity,
-                padding: EdgeInsets.symmetric(horizontal: 10),
-                child: Column(
-                  children: [
-                    QuestionWidget(
-                        indexAction: index,
-                        question: extractedData[index].title,
-                        totalQuestions: extractedData.length),
-                    const Divider(
-                      color: Colors.white,
-                    ),
-                    const SizedBox(
-                      height: 25,
-                    ),
-                    for (int i = 0;
-                        i < extractedData[index].options.length;
-                        i++)
-                      GestureDetector(
-                        onTap: () => checkAnswerAndUpdate(
-                            extractedData[index].options.values.toList()[i]),
-                        child: OptionCard(
-                          option: extractedData[index].options.keys.toList()[i],
-                          color: isPressed
-                              ? extractedData[index]
-                                          .options
-                                          .values
-                                          .toList()[i] ==
-                                      true
-                                  ? Colors.green
-                                  : Colors.red
-                              : Colors.white,
-                        ),
-                      ),
-                  ],
-                ),
-              ),
-              floatingActionButton: GestureDetector(
-                onTap: () => nextQuestion(extractedData.length),
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 10),
-                  child: NextQuestion(),
-                ),
-              ),
-              floatingActionButtonLocation:
-                  FloatingActionButtonLocation.centerFloat,
-            );
-          }
-        } else {
-          return Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                const CircularProgressIndicator(),
-                const SizedBox(
-                  height: 20,
-                ),
-                Text(
-                  'Vui Lòng Đợi 1 xíu !!',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Theme.of(context).primaryColor,
-                    decoration: TextDecoration.none,
-                  ),
-                ),
-              ],
-            ),
-          );
-        }
-        return const Center(
-          child: Text('Không có dữ liệu!!'),
-        );
-      },
-    ); */
   }
 }

@@ -1,16 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_doan_demo1/regimedetoan_screen.dart';
-import 'package:flutter_doan_demo1/regimekhotoan_screen.dart';
-import 'package:flutter_doan_demo1/regimetrungbinhtoan_screen.dart';
+import 'package:flutter_doan_demo1/cauhoide/home_quizly.dart';
+import 'package:flutter_doan_demo1/cauhoikho/home_quizlykho.dart';
+import 'package:flutter_doan_demo1/cauhoitrungbinh/home_quizlytb.dart';
 
-class LevelDauThuongScreen extends StatelessWidget {
+class CheDoLy extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return CheDoLyState();
+  }
+}
+
+class CheDoLyState extends State<CheDoLy> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true, //chữ căn giữa
         title: const Text(
-          'Đấu thường',
+          'Vật lý',
           style: TextStyle(color: Color.fromRGBO(205, 190, 145, 1)),
         ),
         backgroundColor: Color.fromRGBO(30, 35, 40, 1),
@@ -26,24 +33,24 @@ class LevelDauThuongScreen extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              padding: EdgeInsets.only(top: 50),
-              margin: const EdgeInsets.all(120),
+              width: double.infinity,
+              margin: const EdgeInsets.only(top: 150),
               //  alignment: Alignment.bottomCenter,
               child: Column(
                 // mainAxisAlignment: MainAxisAlignment.center,
                 // crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Container(
-                    padding: EdgeInsets.all(15),
+                    padding: EdgeInsets.all(5),
                     child: SizedBox(
-                      height: 80,
-                      width: 120,
+                      height: 100,
+                      width: 150,
                       child: TextButton(
                         child: Text(
                           'Dễ',
                           style: TextStyle(
                             color: Color.fromRGBO(205, 190, 145, 1),
-                            fontSize: 20,
+                            fontSize: 25,
                           ),
                         ),
                         style: ButtonStyle(
@@ -53,22 +60,22 @@ class LevelDauThuongScreen extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => RegimeDeToanScreen()));
+                                  builder: (context) => QuestionLyScreen()));
                         },
                       ),
                     ),
                   ),
                   Container(
-                    padding: EdgeInsets.all(5),
+                    padding: EdgeInsets.all(25),
                     child: SizedBox(
-                      height: 80,
-                      width: 120,
+                      height: 100,
+                      width: 150,
                       child: TextButton(
                         child: Text(
-                          'Trung bình',
+                          'Trung Bình',
                           style: TextStyle(
                             color: Color.fromRGBO(205, 190, 145, 1),
-                            fontSize: 20,
+                            fontSize: 25,
                           ),
                         ),
                         style: ButtonStyle(
@@ -78,23 +85,22 @@ class LevelDauThuongScreen extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) =>
-                                      RegimeTrungBinhToanScreen()));
+                                  builder: (context) => QuestionLyTB()));
                         },
                       ),
                     ),
                   ),
                   Container(
-                    padding: EdgeInsets.all(15),
+                    padding: EdgeInsets.all(25),
                     child: SizedBox(
-                      height: 80,
-                      width: 120,
+                      height: 100,
+                      width: 150,
                       child: TextButton(
                         child: Text(
                           'Khó',
                           style: TextStyle(
                             color: Color.fromRGBO(205, 190, 145, 1),
-                            fontSize: 20,
+                            fontSize: 25,
                           ),
                         ),
                         style: ButtonStyle(
@@ -104,7 +110,7 @@ class LevelDauThuongScreen extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => RegimeKhoToanScreen()));
+                                  builder: (context) => QuestionLyKho()));
                         },
                       ),
                     ),

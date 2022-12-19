@@ -156,34 +156,6 @@ class CaiDatScreenState extends State<CaiDatScreen> {
                             ),
                           ),
                         ),
-                        Container(
-                          height: 80,
-                          width: 250,
-                          margin: EdgeInsets.only(bottom: 10),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: Colors.white,
-                          ),
-                          child: TextButton(
-                            onPressed: () {},
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                Icon(
-                                  Icons.delete,
-                                  color: Colors.black,
-                                ),
-                                Padding(padding: EdgeInsets.only(left: 50)),
-                                Text(
-                                  'Xóa tài khoản',
-                                  style: TextStyle(
-                                      fontSize: 20, color: Colors.black),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
                       ],
                     ),
                   ),

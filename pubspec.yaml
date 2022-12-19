@@ -68,9 +68,7 @@ flutter:
   assets:
     - images/trithuc.jpg
     - images/cup.jpg
-    - images/logokc.jpg
     - images/logoCauHoi.png
-    - images/quiz.png
   #  - images/trithuc.png
 
   # An image asset can refer to one or more resolution-specific "variants", see

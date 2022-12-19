@@ -22,6 +22,7 @@ class DBconnect {
         var newQuestion = Question(
           id: key,
           title: value['title'],
+          answer: value['answer'],
           options: Map.castFrom(value['options']),
         );
         newQuestions.add(newQuestion);
